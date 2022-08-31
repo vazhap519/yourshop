@@ -1,0 +1,794 @@
+@media screen and (min-width: 250px) and (max-width:570px) {
+    
+    .userArea{
+        display: none!important;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .logoArea a{
+        font-size: 15px;
+        margin-left: -100px;
+    }
+    section.burger_menu_icon {
+        width: 30px;
+        height: 30px;
+       color: #fff;
+        margin-top: 15px;
+      right:10px;
+        position: absolute;
+        z-index: 150;
+        font-size: 25px;
+    }
+    .burger_menu{
+        display: none;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(133, 51, 255, 0.85) 24.48%, rgba(3, 59, 59, 0) 100%);
+        position: absolute;
+        height: 100vh;
+        opacity: 1;
+        z-index: 100;
+        top: 60px;
+        
+    }
+    .burger_menu_active{
+        display: block;
+    }
+    
+    .burger_menu_content{
+       
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+
+    }
+    .burger_menu_content_navbar{
+        display: flex;
+
+    }
+    .burger_menu_content_navbar_ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+    }
+
+    .burger_menu_content_userArea{
+        display: flex!important;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-end;
+z-index: 100;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .carousell_area_arrows{
+        max-width: 100%;
+
+    }
+    .content__right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .content__right_top_box{
+        left: 0;
+    }
+    .content__left_new{
+        width: 350px;
+    }
+
+
+    .content__left_new img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .content__right_bottom{
+        left: 0;
+        top: -8px;
+    }
+    .content__right_bottom .content__right_bottom_box h2{
+        font-size: 20px;
+    }
+    .content__right_bottom_sub{
+        margin-left: 0;
+    }
+    #footer .footer_social #fb a::before{
+        left: -35px;
+    }
+    #footer .footer_social #fb a i {
+        left: 70px;
+    }
+
+    #footer .footer_social #insta a::before{
+        right: 0;
+    }
+    #footer .footer_social #insta a i{
+        right: 85px;
+    }
+    .footer_logo{
+        font-size: 25px;
+        margin-left: 70px;
+    }
+        
+        .content__left{
+        width: 100%;
+        overflow: hidden;
+    }
+    .carousell_area{
+width: 90%;
+margin: auto;
+    }
+    .carousell_area_arrows{
+        width: 300px;
+        margin: auto;
+        align-content: center;
+    
+    }
+
+    .content__right{
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    .content__left_new{
+        width: 90%;
+        margin: auto;
+    }
+    .content__left_new_content > img{
+        width: 100%;
+    }
+    .content__right_top{
+        width: 100%;
+    }
+    .content__right_top_box img{
+        max-width: 100%;
+    }
+    .content__right_bottom{
+        max-width: 100%;
+        left: 0;
+        top:0;
+    }
+    .content__right_bottom_box .Line{
+        margin-top: 25px;
+    }
+    .content__right_bottom_box{
+        width: 100%;
+    }
+    .content__right_bottom_sub{
+        width: 100%;
+        margin-left: 0;
+    }
+    .content__right_bottom .content__right_bottom_box h2{
+        top: 50px;
+        font-size: 25px;
+    }
+    .content__right_bottom_box .content__right_bottom_sub  >img{
+        width: 100%;
+    }
+
+
+    #footer .footer_social #fb a::before{
+        width: 70px;
+    }
+    #footer .footer_social #insta a::before{
+        width: 70px;
+        right: 0;
+    }
+    #footer .footer_social{
+        justify-content: space-between;
+    }
+    #footer .footer_social #insta a i {
+        right: 90px;
+    }
+    .footer_logo{
+        font-size: 25px;
+    }
+    .footer_logo >span{
+        margin: auto;
+
+    }
+
+
+
+    .about_us_desc{
+        font-size: 20px;
+        margin-left: 0;
+    }
+    .about_us_logo{
+        font-size: 30px;
+    }
+
+
+    .new_products_shop_content_box{
+        margin-left: 0;
+        margin-top: 30px;
+        font-size: 20px;
+        width: 100%;
+    }
+    .new_products_shop_content{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .product_boxes_area{
+        flex-direction: column;
+    }
+.product_boxes_area_left{
+margin-left: 0;
+margin-bottom: 25px;
+}
+.product_boxes_area_Right {
+    margin-left: 0;
+}
+.product_boxes_area_Right_Content li{
+    margin-left: 0;
+}
+.mega_menu_ul{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.mega_menu_ul_sub{
+    left: 0;
+}
+
+.price_filter_box_prices{
+    width: 93%;
+}
+}
+
+
+
+
+/* // Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 570px) and (max-width:850px) {
+
+
+    .userArea{
+        display: none!important;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .logoArea a{
+        font-size: 25px;
+        margin-left: -250px;
+    }
+    section.burger_menu_icon {
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        margin-top: 20px;
+        right: 10px;
+        position: absolute;
+        z-index: 150;
+        font-size: 25px;
+    }
+    .burger_menu{
+        display: none;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(133, 51, 255, 0.85) 24.48%, rgba(3, 59, 59, 0) 100%);
+        position: absolute;
+        height: 100vh;
+        opacity: 1;
+        z-index: 100;
+        top: 60px;
+        
+    }
+    .burger_menu_active{
+        display: block;
+    }
+    
+    .burger_menu_content{
+       
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+
+    }
+    .burger_menu_content_navbar{
+        display: flex;
+
+    }
+    .burger_menu_content_navbar_ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+    }
+
+    .burger_menu_content_userArea{
+        display: flex!important;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-end;
+z-index: 100;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .carousell_area_arrows{
+        max-width: 100%;
+
+    }
+    .content__right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .content__right_top_box{
+        left: 0;
+    }
+    .content__left_new{
+        width: 350px;
+    }
+
+
+    .content__left_new img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .content__right_bottom{
+        left: 0;
+        top: -8px;
+    }
+    .content__right_bottom .content__right_bottom_box h2{
+        font-size: 20px;
+    }
+    .content__right_bottom_sub{
+        margin-left: 0;
+    }
+    #footer .footer_social #fb a::before{
+        left: -35px;
+    }
+    #footer .footer_social #fb a i {
+        left: 70px;
+    }
+
+    #footer .footer_social #insta a::before{
+        right: 0;
+    }
+    #footer .footer_social #insta a i{
+        right: 85px;
+    }
+    .footer_logo{
+        font-size: 25px;
+        margin-left: 70px;
+    }
+        
+        .content__left{
+        width: 100%;
+        overflow: hidden;
+    }
+    .carousell_area{
+width: 90%;
+margin: auto;
+    }
+    .carousell_area_arrows{
+        width: 300px;
+        margin: auto;
+        align-content: center;
+    
+    }
+
+    .content__right{
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    .content__left_new{
+        width: 90%;
+        margin: auto;
+    }
+    .content__left_new_content > img{
+        width: 100%;
+    }
+    .content__right_top{
+        width: 100%;
+    }
+    .content__right_top_box img{
+        max-width: 100%;
+    }
+    .content__right_bottom{
+        max-width: 100%;
+        left: 0;
+        top:0;
+    }
+    .content__right_bottom_box .Line{
+        margin-top: 25px;
+    }
+    .content__right_bottom_box{
+        width: 100%;
+    }
+    .content__right_bottom_sub{
+        width: 100%;
+        margin-left: 0;
+    }
+    .content__right_bottom .content__right_bottom_box h2{
+        top: 50px;
+        font-size: 25px;
+    }
+    .content__right_bottom_box .content__right_bottom_sub  >img{
+        width: 100%;
+    }
+
+
+    #footer .footer_social #fb a::before{
+        width: 70px;
+    }
+    #footer .footer_social #insta a::before{
+        width: 70px;
+        right: 0;
+    }
+    #footer .footer_social{
+        justify-content: space-between;
+    }
+    #footer .footer_social #insta a i {
+        right: 90px;
+    }
+    .footer_logo{
+        font-size: 25px;
+    }
+    .footer_logo >span{
+        margin: auto;
+
+    }
+
+
+
+
+    .about_us_desc{
+        font-size: 30px;
+        margin-left: 0;
+    }
+    .about_us_logo{
+        font-size: 60px;
+    }
+    .new_products_shop_content_box{
+        margin-left: 0;
+        margin-top: 30px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .new_products_shop_content{
+        flex-direction: column;
+        margin: auto;
+    }
+
+
+
+
+    .new_products_shop_content_box{
+        margin-left: 0;
+        margin-top: 30px;
+        font-size: 20px;
+        width: 100%;
+    }
+    .new_products_shop_content{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .product_boxes_area{
+        flex-direction: column;
+    }
+.product_boxes_area_left{
+margin-left: 0;
+margin-bottom: 25px;
+}
+.product_boxes_area_Right {
+    margin-left: 0;
+}
+.product_boxes_area_Right_Content li{
+    margin-left: 0;
+}
+.mega_menu_ul{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.mega_menu_ul_sub{
+    left: 0;
+}
+
+.price_filter_box_prices{
+    width: 93%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 850px) and (max-width:1330px) { 
+   
+    .userArea{
+        display: none!important;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .logoArea a{
+        font-size: 25px;
+        margin-left: -250px;
+    }
+    section.burger_menu_icon {
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        margin-top: 20px;
+        right: 10px;
+        position: absolute;
+        z-index: 150;
+        font-size: 25px;
+    }
+    .burger_menu{
+        display: none;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(133, 51, 255, 0.85) 24.48%, rgba(3, 59, 59, 0) 100%);
+        position: absolute;
+        height: 100vh;
+        opacity: 1;
+        z-index: 100;
+        top: 60px;
+        
+    }
+    .burger_menu_active{
+        display: block;
+    }
+    
+    .burger_menu_content{
+       
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+
+    }
+    .burger_menu_content_navbar{
+        display: flex;
+
+    }
+    .burger_menu_content_navbar_ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+    }
+
+    .burger_menu_content_userArea{
+        display: flex!important;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-end;
+z-index: 100;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .carousell_area_arrows{
+        max-width: 100%;
+
+    }
+    .content__right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .content__right_top_box{
+        left: 0;
+    }
+    .content__left_new{
+        width: 350px;
+    }
+
+
+    .content__left_new img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .content__right_bottom{
+        left: 0;
+        top: -8px;
+    }
+    .content__right_bottom .content__right_bottom_box h2{
+        font-size: 20px;
+    }
+    .content__right_bottom_sub{
+        margin-left: 0;
+    }
+    #footer .footer_social #fb a::before{
+        left: -35px;
+    }
+    #footer .footer_social #fb a i {
+        left: 70px;
+    }
+
+    #footer .footer_social #insta a::before{
+        right: 0;
+    }
+    #footer .footer_social #insta a i{
+        right: 85px;
+    }
+    .footer_logo{
+        font-size: 25px;
+        margin-left: 70px;
+    }
+        
+        .content__left{
+        width: 100%;
+        overflow: hidden;
+    }
+    .carousell_area{
+width: 90%;
+margin: auto;
+    }
+    .carousell_area_arrows{
+        width: 300px;
+        margin: auto;
+        align-content: center;
+    
+    }
+
+    .content__right{
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    .content__left_new{
+        width: 90%;
+        margin: auto;
+    }
+    .content__left_new_content > img{
+        width: 100%;
+    }
+    .content__right_top{
+        width: 100%;
+    }
+    .content__right_top_box img{
+        max-width: 100%;
+    }
+    .content__right_bottom{
+        max-width: 100%;
+        left: 0;
+        top:0;
+    }
+    .content__right_bottom_box .Line{
+        margin-top: 25px;
+    }
+    .content__right_bottom_box{
+        width: 100%;
+    }
+    .content__right_bottom_sub{
+        width: 100%;
+        margin-left: 0;
+    }
+    .content__right_bottom .content__right_bottom_box h2{
+        top: 50px;
+        font-size: 25px;
+    }
+    .content__right_bottom_box .content__right_bottom_sub  >img{
+        width: 100%;
+    }
+
+
+    #footer .footer_social #fb a::before{
+        width: 70px;
+    }
+    #footer .footer_social #insta a::before{
+        width: 70px;
+        right: 0;
+    }
+    #footer .footer_social{
+        justify-content: space-between;
+    }
+    #footer .footer_social #insta a i {
+        right: 90px;
+    }
+    .footer_logo{
+        font-size: 25px;
+    }
+    .footer_logo >span{
+        margin: auto;
+
+    }
+
+    .about_us_desc{
+        font-size: 30px;
+        margin-left: 0;
+    }
+    .about_us_logo{
+        font-size: 60px;
+    }
+    .new_products_shop_content_box{
+        margin-left: 0;
+        margin-top: 30px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .new_products_shop_content{
+        flex-direction: column;
+        margin: auto;
+    }
+
+
+    .new_products_shop_content_box{
+        margin-left: 0;
+        margin-top: 30px;
+        font-size: 20px;
+        width: 100%;
+    }
+    .new_products_shop_content{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .product_boxes_area{
+        flex-direction: column;
+    }
+.product_boxes_area_left{
+margin-left: 0;
+margin-bottom: 25px;
+}
+.product_boxes_area_Right {
+    margin-left: 0;
+}
+.product_boxes_area_Right_Content li{
+    margin-left: 0;
+}
+.mega_menu_ul{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.mega_menu_ul_sub{
+    left: 0;
+}
+
+.price_filter_box_prices{
+    width: 93%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+// Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .logoArea a{
+        font-size: 25px;
+    }
+}
