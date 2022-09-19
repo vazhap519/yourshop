@@ -11,6 +11,6 @@
         <div class="footer_copyryght_content">
             <span class="changeCopy">copyright</span> &copy;<span class="changeCopyyar">2022</span>
         </div>
-     
+
     </div>
 </footer>

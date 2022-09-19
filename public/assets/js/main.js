@@ -10,36 +10,36 @@ if(TopCarousellContent && topCarousellLeftBtn && topCarousellRighttn && TopCarou
             TopCarousellContent[i].classList.remove('carousell_area_box_active')
              newColor=TopCarousellContent[TopCarousellCounter].getAttribute('data-bgColor');
         }
-    
+
     }
     function topCarousellRighttn_f(){
         TopCarousellContentItems()
         TopCarousellCounter++
         if(TopCarousellCounter>TopCarousellContent.length-1){
             TopCarousellCounter=0
-        
+
         }
         var newColor=TopCarousellContent[TopCarousellCounter].getAttribute('data-bgColor');
         fullsite.style.background=newColor;
         TopCarousellContent[TopCarousellCounter].classList.add('carousell_area_box_active')
     }
-    
+
     function topCarousellLeftBtn_f(){
         TopCarousellContentItems()
         TopCarousellCounter--
         if(TopCarousellCounter<=TopCarousellContent.length-1){
             TopCarousellCounter=0
         }
-      
+
         var newColor=TopCarousellContent[TopCarousellCounter].getAttribute('data-bgColor');
         fullsite.style.background=newColor;
         TopCarousellContent[TopCarousellCounter].classList.add('carousell_area_box_active')
     }
-    
+
     function TopCarousellAutoplay(){
         topCarousellRighttn_f()
     }
-    
+
     var TopAuto=setInterval(TopCarousellAutoplay,1000)
 
 }
@@ -75,9 +75,9 @@ Sign_in.addEventListener('click',function(){
      alert('შეამოწმე სიმბოლოების რაოდენობა ან ძაღლუკა ')
      filter.test(E_mail.value)
      E_mail.style.border="3px solid red"
-     
+
  }else{
-    
+
      E_mail.style.border="3px solid #A889F2"
  }
 
@@ -85,7 +85,7 @@ Sign_in.addEventListener('click',function(){
     alert('შეამოწმე პაროლის სიგრძე და სისწორე ')
     PassWordCheck.style.border="3px solid red"
  }else{
-    
+
     PassWordCheck.style.border="3px solid #A889F2"
  }
 })
@@ -127,7 +127,7 @@ shopItems.forEach((item)=>{
 
     let quantText=quant.innerText;
 
- 
+
 let product=item;
 let addC=product.querySelectorAll('.product_box_area_right_Content_desc_add_To_Cart');
 
@@ -160,7 +160,7 @@ total=total + sumFloat * quantText;
                                       <span class="shopingCart_Ul_Content_items_Counter_count">${quantText}</span>
                                       <span class="shopingCart_Ul_Content_items_Counter_Plus">+</span>
                                   </div>
-        
+
                                   <span class="shopingCart_Ul_Content_items_item_Remove">X</span>
                          </li>
         `;
@@ -171,7 +171,7 @@ total=total + sumFloat * quantText;
 })
 
 
- 
+
 })
 
 
@@ -231,10 +231,10 @@ let PriceRangeMin=document.querySelector('.price_filter_box_prices_min');
 let PriceRangeMax=document.querySelector('.price_filter_box_prices_max');
 PriceRange=document.querySelector('.price_range');
 
-PriceRange.addEventListener('change',(e)=>{
-    console.log(e.target);
-    console.log(PriceRangeMin.value,PriceRangeMax.value)
-})
+// PriceRange.addEventListener('change',(e)=>{
+//     console.log(e.target);
+//     console.log(PriceRangeMin.value,PriceRangeMax.value)
+// })
 
 if(Products_box && brandsFilter && price_filter &&  modelsFilter){
     let price_filter_header=price_filter.querySelector('.price_filter_headder');
@@ -277,7 +277,7 @@ if(Products_box && brandsFilter && price_filter &&  modelsFilter){
             brandsFilterList.classList.add("band_list_active");
         }
     })
-    
+
     /*
     ========================================================================================================================================================
                                             BRANDS  FILTER END
@@ -294,32 +294,32 @@ if(Products_box && brandsFilter && price_filter &&  modelsFilter){
     })
 
 
-    
+
     /*
     ========================================================================================================================================================
                                             MODELS  FILTER END
     ========================================================================================================================================================
     */
-    
+
 
 }
 
 
 
 
-function burgerMenu(){
-    let BurgerIco=document.querySelector('.burger_menu_icon');
-    let BurgerMenu_Cont=document.querySelector('.burger_menu');
-    BurgerIco.addEventListener('click',(e)=>{
-        e.preventDefault();
-        if(BurgerMenu_Cont.classList.contains('burger_menu_active')){
-            BurgerMenu_Cont.classList.remove('burger_menu_active');
-           
-        }else{
-            BurgerMenu_Cont.classList.add('burger_menu_active');
-        }
-        console.log(e)
-    })
-}
-burgerMenu()
+// function burgerMenu(){
+//     let BurgerIco=document.querySelector('.burger_menu_icon');
+//     let BurgerMenu_Cont=document.querySelector('.burger_menu');
+//     BurgerIco.addEventListener('click',(e)=>{
+//         e.preventDefault();
+//         if(BurgerMenu_Cont.classList.contains('burger_menu_active')){
+//             BurgerMenu_Cont.classList.remove('burger_menu_active');
+//
+//         }else{
+//             BurgerMenu_Cont.classList.add('burger_menu_active');
+//         }
+//         console.log(e)
+//     })
+// }
+// burgerMenu()
 

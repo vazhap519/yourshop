@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/',[\App\Http\Controllers\pageController::class,'index']);
+Route::get('/shop',[\App\Http\Controllers\pageController::class,'shop']);
+Route::get('/about',[\App\Http\Controllers\pageController::class,'about']);
+Route::get('/sale',[\App\Http\Controllers\pageController::class,'sale']);
+
