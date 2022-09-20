@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\Admin;
 
 use Closure;
 use Illuminate\Http\Request;
 
-class AdminMiddleware
+class AdminMidleware
 {
     /**
      * Handle an incoming request.
@@ -16,6 +16,9 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        if(!Auth::user()->role_as=="1"){
+            return redirect('/')->with('status', 'წვდომა უარყოფილია არ ხართ ადმინისტრატორი');
+        }
         return $next($request);
     }
 }

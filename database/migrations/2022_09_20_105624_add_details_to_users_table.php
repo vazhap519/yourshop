@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MenuTableCreate extends Migration
+class AddDetailsToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class MenuTableCreate extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
-            $table->id();
-            $table->string('menuid')->unique();
-            $table->text('menu_name');
-           
+        Schema::table('users', function (Blueprint $table) {
+           $table->tinyInteger('role_as')->default('0')->comment('0=user,1=admin');
         });
     }
 
@@ -28,6 +25,8 @@ class MenuTableCreate extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }
