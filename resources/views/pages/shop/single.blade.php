@@ -5,7 +5,7 @@
             <div class="single_product_content_Top_desc_ToP">
                 <div class="single_product_content_Top_desc_Left">
                     <div class="single_product_content_Top_desc_Left_top">
-                        <img src="./assets/images/product_images/ps.png" alt="" class="single_product_content_Top_desc_Left_img">
+                        <img src="{{asset('./assets/images/product_images/ps.png')}}" alt="" class="single_product_content_Top_desc_Left_img">
                         <div class="single_product_content_Top_desc_Left_price">500$</div>
                     </div>
 

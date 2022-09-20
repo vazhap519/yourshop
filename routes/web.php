@@ -20,6 +20,7 @@ Route::get('/about',[\App\Http\Controllers\pageController::class,'about']);
 Route::get('/sale',[\App\Http\Controllers\pageController::class,'sale']);
 
 
-Route::prefix('admin')->middleware(['auth','admin'])->group(function(){
-Route::get('/dashboard',[\App\Http\Controllers\admin\AdminController::class,'index']);
-});
+//Route::prefix('admin')->middleware(['auth','admin'])->group(function(){
+//
+//});
+Route::get('/admin/index',[\App\Http\Controllers\Admin\AdminController::class,'index']);

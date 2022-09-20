@@ -23,7 +23,8 @@
                 <li class="LoginAreaUl_ico"></li>
                 <li class="LoginAreaUl_Content">
 
-                    <form  class="LoginAreaUl_Content_Form">
+                    <form  class="LoginAreaUl_Content_Form" action="/login">
+						@csrf
                         <div class="LoginAreaUl_Content_Form_Inputs">
                             <label for="email" >ემაილი</label>
                             <input type="email" id="email" name="email" placeholder="admin@expample.com">
