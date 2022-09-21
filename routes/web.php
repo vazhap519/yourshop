@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
+
 Route::get('adminindex',[\App\Http\Controllers\admin\AdminController::class,'index'])->name('admin');
 Route::get('admin/menus/defaultmenu',[\App\Http\Controllers\Admin\Menu\MenuController::class,'index'])->name('menu_create');
 =======
@@ -28,4 +28,4 @@ Route::get('/sale',[\App\Http\Controllers\pageController::class,'sale']);
 //
 //});
 Route::get('/admin/index',[\App\Http\Controllers\Admin\AdminController::class,'index']);
->>>>>>> 54bfb6cc402d27f9b857017cf976201ad7caf5dc
+
