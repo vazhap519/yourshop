@@ -14,7 +14,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+
+		return view('admin.menus.defaultmenu.create');
     }
 
     /**
@@ -35,7 +36,12 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$data=new Menu();
+		$data->name=$request->name;
+		$data->link=$request->link;
+		$data->status=$request->status;
+		$data->save();
+
     }
 
     /**

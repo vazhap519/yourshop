@@ -36,7 +36,12 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$data=new Menu();
+		$data->name=$request->name;
+		$data->link=$request->link;
+		$data->status=$request->status;
+		$data->save();
+		return redirect()->back();
     }
 
     /**
