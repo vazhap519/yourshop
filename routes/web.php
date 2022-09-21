@@ -13,13 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/',[\App\Http\Controllers\pageController::class,'index']);
-Route::get('/shop',[\App\Http\Controllers\pageController::class,'shop']);
-Route::get('/about',[\App\Http\Controllers\pageController::class,'about']);
-Route::get('/sale',[\App\Http\Controllers\pageController::class,'sale']);
-
-
-Route::prefix('admin')->middleware(['auth','admin'])->group(function(){
-Route::get('/dashboard',[\App\Http\Controllers\admin\AdminController::class,'index']);
-});
+Route::get('adminindex',[\App\Http\Controllers\admin\AdminController::class,'index'])->name('admin');
+Route::get('admin/menus/defaultmenu',[\App\Http\Controllers\Admin\Menu\MenuController::class,'index'])->name('menu_create');

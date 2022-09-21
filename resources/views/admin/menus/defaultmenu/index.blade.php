@@ -1,13 +1,12 @@
 @extends('layouts.adminbase')
 @section('content')
-<div class="col-sm-12 col-xl-6">
-    <div class="bg-secondary rounded h-100 p-4">
-        <h6 class="mb-4">მენიუს შექმნა</h6>
-        <form action="" method="POST">
+
+        <h6 class="mb-4">Horizontal Form</h6>
+        <form>
             <div class="row mb-3">
-                <label for="menuname" class="col-sm-2 col-form-label">სახელი</label>
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control"  name="name" id="menuname">
+                    <input type="email" class="form-control" id="inputEmail3">
                 </div>
             </div>
             <div class="row mb-3">
@@ -46,6 +45,5 @@
             </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
-    </div>
-</div>
+ 
 @endsection
