@@ -17,6 +17,8 @@
 			<li><a href="{{url('/shop')}}">მაღაზია</a></li>
 			<li><a href="{{url('/sale')}}">ფასდაკლება</a></li>
 			<li><a href="{{url('/about')}}">ჩვენს შესახებ</a></li>
+
+		<li><a href="{{url('$item->link')}}"></a></li>
 		</ul>
 	</nav>
 	<!--

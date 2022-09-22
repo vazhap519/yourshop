@@ -5,7 +5,7 @@
 	<form role="form" action="{{route('menu_store')}}" method="POST">
 		@csrf
 		<div class="mb-3">
-			<label for="menuname" class="form-label">მენიუს სახელი</label>
+			<label for="menuname" class="form-label">მენიუს რედაქტირება</label>
 			<input type="text" class="form-control" id="menuname" name="name">
 
 		</div>
@@ -21,7 +21,7 @@
 						<option value="0">false</option>
 			</select>
 		</div>
-		<button type="submit" class="btn btn-primary">მენიუს კატეგორიის დამატება</button>
+		<button type="submit" class="btn btn-primary">მენიუს კატეგორიის რედაქტირება</button>
 	</form>
 
 @endsection

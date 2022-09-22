@@ -1,4 +1,4 @@
-
+{{-- 
 @extends('layouts.adminbase')
 @section('content')
 <div class="col-sm-12 col-xl-6">
@@ -963,4 +963,4 @@
 <script src="dist/js/pages/dashboard.js"></script>
 </body>
 </html>
->>>>>>> 54bfb6cc402d27f9b857017cf976201ad7caf5dc
+>>>>>>> 54bfb6cc402d27f9b857017cf976201ad7caf5dc --}}

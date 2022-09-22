@@ -23,8 +23,8 @@ Route::get('/single',[\App\Http\Controllers\HomeController::class,'single'])->na
 
 
 
-Route::get('adminindex',[\App\Http\Controllers\admin\AdminController::class,'index'])->name('admin');
-Route::get('admin/menus/defaultmenu',[\App\Http\Controllers\Admin\Menu\MenuController::class,'index'])->name('menu_create');
+Route::get('adminindex',[\App\Http\Controllers\admin\AdminController::class,'index'])->name('adminindex');
+Route::get('admin/menus/defaultmenu/create',[\App\Http\Controllers\Admin\Menu\MenuController::class,'index'])->name('menu_create');
 Route::post('admin/menus/defaultmenu/store',[\App\Http\Controllers\Admin\Menu\MenuController::class,'store'])->name('menu_store');
 
 

@@ -15,7 +15,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-       return view('admin.menus.defaultmenu.index');
+        // $menu=Menu::all();
+        return view('admin.menus.defaultmenu.create');
     }
 
     /**
@@ -24,7 +25,7 @@ class MenuController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {       
         //
     }
 
@@ -52,7 +53,7 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-        //
+
     }
 
     /**
