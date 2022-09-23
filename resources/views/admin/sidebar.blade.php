@@ -1,3 +1,6 @@
+@extends('layouts.adminbase')
+@section('content')
+
 <div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-secondary navbar-dark">
         <a href="index.html" class="navbar-brand mx-4 mb-3">
@@ -14,13 +17,13 @@
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>დაშბორდი</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>მენიუ</a>
+                <a href="{{route('menu_create')}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>მენიუ</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="{{route('menu_create')}}" class="dropdown-item">მენიუს შექმნა</a>
-                    <a href="typography.html" class="dropdown-item">მენიუს რედაქტირება</a>
-                    <a href="element.html" class="dropdown-item">Other Elements</a>
+                    <a href="{{route('menu_edit')}}" class="dropdown-item">მენიუს რედაქტირება</a>
+                 
                 </div>
             </div>
             <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
@@ -39,3 +42,4 @@
         </div>
     </nav>
 </div>
+@endsection

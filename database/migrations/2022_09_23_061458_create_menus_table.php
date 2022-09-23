@@ -17,7 +17,8 @@ class CreateMenusTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('link');
-            $table->boolean('status');
+            $table->string('meta_-keyboards');
+            $table->string('meta_description');
             $table->timestamps();
         });
     }
