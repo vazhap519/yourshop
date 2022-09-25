@@ -1,73 +1,54 @@
 @extends('layouts.frontend')
 @section('content')
-<div class="content about_us_conttent">
-	<div class="about_us">
-		<span class="about_us_line"></span>
-		<h2 class="about_us_header">ჩვენს შესახებ</h2>
-		<section class="about_us_desc">
-			<p>Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია.
-				იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა.
+    <div class="content checkout_content">
+        <div class="checkout_content_sub">
+            <h3 class="checkout_content_sub_header">შეიყვანე ბარათის მონაცემები</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 pay_form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="cart_user" class="form-label">ბარათის მფლობელი</label>
+                                <input type="email" name="cart_user" class="form-control" id="cart_user">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cart_number" class="form-label">ბარათის ნომერი</label>
+                                <input type="number" name="cart_number" class="form-control" id="cart_number">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cart_number_cvv" class="form-label"> cvv კოდი</label>
+                                <input type="text" name="cart_number_cvv" class="form-control" id="cart_number_cvv" maxlength="3">
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="cart_number_exp_date" class="form-label"> თვე</label>
+                                            <input type="text" name="cart_number_exp_month" class="form-control" id="cart_number_exp_month" maxlength="2">
 
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="cart_number_exp_date" class="form-label"> წელი</label>
+                                            <input type="text" name="cart_number_exp_year" class="form-control" id="cart_number_exp_year" maxlength="4">
 
-			</p>
-		</section>
-	</div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mb-3">
 
-	<h2 class="about_us_logo">
-		Your Technology
-	</h2>
+                                    <button type="submit" class="btn chechout">გადახდა</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<ul class="new_products_shop_content">
-		<div class="new_products_shop_content_box">
-			<h2 class="new_products_shop_content_box_title">
-				<a href="">product 1</a>
-				<span class="new_products_shop_content_box_title_line"></span>
-				<article class="new_products_shop_content_box_desc">
-					<img src="./assets/images/5.png">
-					<section class="new_products_shop_content_box_desc_short">
-						<a href="">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-						</a>
-					</section>
-				</article>
-			</h2>
-
-		</div>
-		<div class="new_products_shop_content_box">
-			<h2 class="new_products_shop_content_box_title">
-				<a href="">product 1</a>
-				<span class="new_products_shop_content_box_title_line"></span>
-				<article class="new_products_shop_content_box_desc">
-					<img src="./assets/images/5.png">
-					<section class="new_products_shop_content_box_desc_short">
-						<a href="">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-						</a>
-					</section>
-				</article>
-			</h2>
-
-		</div>
-		<div class="new_products_shop_content_box">
-			<h2 class="new_products_shop_content_box_title">
-				<a href="">product 1</a>
-				<span class="new_products_shop_content_box_title_line"></span>
-				<article class="new_products_shop_content_box_desc">
-					<img src="./assets/images/5.png">
-					<section class="new_products_shop_content_box_desc_short">
-						<a href="">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-						</a>
-					</section>
-				</article>
-			</h2>
-
-		</div>
-	</ul>
-
-</div>
 @endsection

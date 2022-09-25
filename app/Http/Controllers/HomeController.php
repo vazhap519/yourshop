@@ -39,4 +39,6 @@ class HomeController extends Controller
 	public function single(){
 		return view('frontend.single');
 	}
+
+
 }

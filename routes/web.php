@@ -12,20 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('home');
-Route::get('/about',[\App\Http\Controllers\HomeController::class,'about'])->name('about');
-Route::get('/checkout',[\App\Http\Controllers\HomeController::class,'checkout'])->name('checkout');
-Route::get('/sale',[\App\Http\Controllers\HomeController::class,'sale'])->name('sale');
+Route::prefix('/')->group(function () {
+Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');
 Route::get('/shop',[\App\Http\Controllers\HomeController::class,'shop'])->name('shop');
-Route::get('/single',[\App\Http\Controllers\HomeController::class,'single'])->name('single');
+Route::get('/sale',[\App\Http\Controllers\HomeController::class,'sale'])->name('sale');
+Route::get('/about',[\App\Http\Controllers\HomeController::class,'about']);
+});
 
 
-
-
-
-
-
-
-
-
+Route::get('/admindashboard',[\App\Http\Controllers\AdminController::class,'index'])->name('dashboard');
+Route::get('topcat',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'index'])->name('topcat');
+Route::get('menu_create',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'create'])->name('menu_create');
+Route::post('menu_store',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'store'])->name('menu_store');

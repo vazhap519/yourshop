@@ -15,27 +15,28 @@
     font-family: 'dejavuWoff2';
     src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff2');
 
+
     font-family: 'dejavuWoff';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff');
 
 
     font-family: 'dejavuEot';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.eot');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.eot');
 
     font-family: 'dejavuSvg';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.svg');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.svg');
 
     font-family: 'dejavuTtf';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.ttf');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.ttf');
 
     font-family: 'Poppins-Regular';
-    src: url('/assets/fonts/popins/Poppins-Regular.ttf');
+    src: url('./assets/fonts/popins/Poppins-Regular.ttf');
 
     font-family: 'Poppins-samibold';
-    src: url('/assets/fonts/popins/Poppins-SemiBold.ttf');
+    src: url('./assets/fonts/popins/Poppins-SemiBold.ttf');
 
     font-family: 'Vermin';
-    src: url('/assets/fonts/Vermin.otf');
+    src: url('./assets/fonts/Vermin.otf');
 }
 #wrapper{
     background-color: black;
@@ -154,12 +155,12 @@
 
     width: 30px;
     height: 30px;
-    background-image: url('/assets/images/Login.png');
+    background-image: url('./assets/images/Login.png');
     margin-top: 20px;
 }
 
 .LoginAreaUl_ico_Active{
-    background-image: url('/assets/images/Login_active.png')!important;
+    background-image: url('./assets/images/Login_active.png')!important;
 }
 
 .LoginAreaUl_Content_Active{
@@ -249,13 +250,13 @@
     position: relative;
 }
 .shopingCart_Ul_Ico{
-    background-image: url('/assets/images/cart.png');
+    background-image: url('./assets/images/cart.png');
     width: 30px;
     height: 30px;
     margin-top: 20px;
 }
 .shopingCart_Ul_Ico_active{
-    background-image: url('/assets/images/cart_active.png');
+    background-image: url('./assets/images/cart_active.png');
 }
 .shopingCart_Ul_Content{
     width: 550px;
@@ -412,7 +413,7 @@ Shoping Cart style end
     margin-top: 20px;
     margin-left: 10px;
     background-repeat: no-repeat;
-    background-image: url('/assets/images/heart.png');
+    background-image: url('./assets/images/heart.png');
 }
 
 .Favorites_Ul_Content{
@@ -481,7 +482,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
 .Favorites_Ul_Content_Sub_C_Ico{
     width: 30px;
     height: 30px;
-    background-image: url('/assets/images/heart.png');
+    background-image: url('./assets/images/heart.png');
     background-repeat: no-repeat;
 }
 /*
@@ -515,7 +516,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
     width: 25px;
     height: 25px;
     position: absolute;
-    background-image: url("/assets/images/search.png");
+    background-image: url("./assets/images/search.png");
     border: none;
     top: 5px;
     right: 5px;
@@ -568,10 +569,15 @@ span.Favorites_Ul_Content_Sub_R_Title{
     position: absolute;
     width: 100%;
     height: 100%;
+    display: none;
 }
+
 .content__left_new_content > img{
     padding-left: 15px;
     padding-right: 15px;
+}
+.content__left_new_content_active{
+    display: block;
 }
 /*
 =======================================================================================================================
@@ -599,22 +605,38 @@ span.Favorites_Ul_Content_Sub_R_Title{
     color: #484848;
     text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
-.sales_price{
+/*.sales_price{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    font-family: 'Poppins';*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    line-height: 20px;*/
+/*    !* identical to box height *!*/
+/*font-size: 25px;*/
+
+/*    color: rgba(72, 72, 72, 0.9);*/
+/*    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);*/
+/*}*/
+/*.product_box_area_right_Content_desc_Price_old{*/
+/*    text-decoration: line-through;*/
+/*    color: red;*/
+/*}*/
+/*!**/
+
+.Sale_price {
     display: flex;
     flex-direction: column;
+    width: auto;
+    justify-content: space-evenly;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    /* identical to box height */
-    font-size: 25px;
-
-    color: rgba(72, 72, 72, 0.9);
-    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
-.product_box_area_right_Content_desc_Price_old{
-    text-decoration: line-through;
+.product_box_area_right_Content_desc_Price_sale{
     color: red;
+    text-decoration: line-through;
 }
 /*
 =======================================================================================================================
@@ -826,17 +848,46 @@ h2.carousell_area_box_title{
     width: 800px;
     max-width: 100%;
 }
-.content__right_top_box{
+
+.content_right_top_box{
     height: 100%;
     width: 100%;
     position: absolute;
-    left: 25px;
-    top: 55px;
+    display: none;
+
 }
-.content__right_top_box img{
-    height: 400px;
-    width: 750px;
-    max-width: 100%;
+.content_right_top_box_active{
+    display: block!important;
+}
+
+
+.content__right_top_box_a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    display: block;
+    text-decoration: none;
+}
+.content__right_top_box_a img{
+    height: 80%;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    display: block;
+}
+.content__right_top_box_a h2{
+    background: linear-gradient(45deg, black, transparent);
+    padding: 10px;
+    text-transform: uppercase;
+    display: none;
+    margin-top: 500px;
+    color: #ccc;
+    text-decoration: none;
+    text-align: center;
+}
+.content__right_top_box_a:hover >  h2 {
+    display: block!important;
 }
 .content__right_bottom{
     width: 750px;
@@ -853,11 +904,20 @@ h2.carousell_area_box_title{
     -ms-flex-direction: column;
     flex-direction: column;
 
+
+}
+.content__right_bottom_box{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
     background: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     border-radius: 10px
 }
+
+
 .content__right_bottom_box .Line{
     position: absolute;
     width: 100px;
@@ -888,12 +948,7 @@ h2.carousell_area_box_title{
     margin-left: 45px;
     margin-top: 135px;
 }
-.content__right_bottom_box{
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-}
+
 .content__right_bottom_box  .content__right_bottom_sub h3{
     font-family: 'Poppins-Regular';
     font-size: 25px;
@@ -958,7 +1013,7 @@ h2.carousell_area_box_title{
     content: '';
     width: 100px!important;
     height: 5px;
-    background-image: url('/assets/images/Rectangle\ 1.png');
+    background-image: url('./assets/images/Rectangle\ 1.png');
     position: absolute;
     top: 15px;
 }
@@ -994,7 +1049,7 @@ h2.carousell_area_box_title{
     content: '';
     width: 100px!important;
     height: 5px;
-    background-image: url('/assets/images/Rectangle\ 1.png');
+    background-image: url('./assets/images/Rectangle\ 1.png');
     position: absolute;
     top: 15px;
 }
@@ -1813,4 +1868,5 @@ h3.product_boxes_area_Right_Content_product_title {
                                                 SINGLE  PRODUCT AREA END
 =======================================================================================================================
 */
+
 
