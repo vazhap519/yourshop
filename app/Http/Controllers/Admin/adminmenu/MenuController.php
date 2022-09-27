@@ -26,8 +26,10 @@ class MenuController extends Controller
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
         ]);
-//        dd($request->all());
             Menu::create($request->all());
             return redirect()->back();
+    }
+    public function show($id){
+        dd($id);
     }
 }
