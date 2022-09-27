@@ -130,7 +130,7 @@ shopItems.forEach((item)=>{
 
 let product=item;
 let addC=product.querySelectorAll('.product_box_area_right_Content_desc_add_To_Cart');
-
+let test=0;
 
 
 addC.forEach((add_to_cart)=>{
