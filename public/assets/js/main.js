@@ -96,9 +96,8 @@ Sign_in.addEventListener('click',function(){
 */
 let ShopIco=document.querySelector('.shopingCart_Ul_Ico')
 let ShopContent=document.querySelector('.shopingCart_Ul_Content');
-let addCart_ico=document.querySelectorAll('.product_box_area_right_Content_desc_add_To_Cart');
-let shopItems=document.querySelectorAll('.product_boxes_area_Right_Content li')
-console.log(shopItems)
+// let shopItems=document.querySelectorAll('.product_boxes_area_Right_Content li')
+
 ShopIco.addEventListener('click',(e)=>{
     e.preventDefault();
 if(ShopIco.classList.contains('shopingCart_Ul_Ico_active')){
@@ -113,71 +112,36 @@ if(ShopContent.classList.contains('shopingCart_Ul_Content_Active')){
 }
 })
 
+let shopingCartItemRemove=document.getElementsByClassName('shopingCart_Ul_Content_items_item_Remove');
 
 
+for(var i=0;i<shopingCartItemRemove.length;i++){
+console.log(shopingCartItemRemove[i].addEventListener('click',Remove))
+}
 
+function Remove  (params) {
+let targetRemove=params.target;
+let RemoveBtn=targetRemove.parentElement.remove();
 
+}
+function updateCartTotal(){
+    let shopingCartContainer=document.getElementsByClassName('shopingCart_Ul_Content_items')[0]
+    let shopingCartContainerItems=document.getElementsByClassName('shopingCart_Ul_Content_items_item')
+    for(var i=0;i<shopingCartContainerItems.length;i++){
+        let items=shopingCartContainerItems[i];
+       let priceVal=items.getElementsByClassName('shopingCart_Ul_Content_items_price')[0];
+         let parsinPriceVal=parseFloat(priceVal.textContent.replace(' ₾', ' '))
+        let QtyVal=items.getElementsByClassName('shopingCart_Ul_Content_items_Counter_count')[0];
+        let QtyValParse=parseInt(QtyVal.textContent)
 
-shopItems.forEach((item)=>{
-    let total=0;
-    let sum=document.querySelector('.shopingCart_Ul_Content_items_sub__Total_sum');
-    let sumFloat=parseFloat(sum.innerText.replace('$',''))
-
-    let quant=document.querySelector('.shopingCart_Ul_Content_items_Counter_count');
-
-    let quantText=quant.innerText;
-
-
-let product=item;
-let addC=product.querySelectorAll('.product_box_area_right_Content_desc_add_To_Cart');
-let test=0;
-
-
-addC.forEach((add_to_cart)=>{
-    add_to_cart.addEventListener('click',(e)=>{
-        let Add=e.target;
-        let Addprice=Add.parentNode.parentNode.children[1];
-        let AddpriceR=parseFloat(Addprice.innerText.replace('$',' '));
-        console.log(AddpriceR)
-        let AddName=Add.parentNode.parentNode.parentNode.parentNode.childNodes[1].children[1];
-        let AddNameText=AddName.textContent;
-        let AddImage=Add.parentNode.parentNode.parentNode.parentNode.childNodes[1].children[0].src;
-        let cartRow=document.querySelector('.shopingCart_Ul_Content_items');
-cartRow.innerHTML=CartADD;
-
-
-total=total + sumFloat * quantText;
-
-        let CartADD=`
-                        <li class="shopingCart_Ul_Content_items_item">
-                                    <div class="shopingCart_Ul_Content_items_desc">
-                                        <img class="shopingCart_Ul_Content_items_desc_img" src="${AddImage}">
-                                        <span class="shopingCart_Ul_Content_items_desc_title">${AddNameText}</span>
-                                    </div>
-                                    <span class="shopingCart_Ul_Content_items_price">${AddpriceR}$</span>
-                                  <div class="shopingCart_Ul_Content_items_Counter">
-                                      <span class="shopingCart_Ul_Content_items_Counter_minus">-</span>
-                                      <span class="shopingCart_Ul_Content_items_Counter_count">${quantText}</span>
-                                      <span class="shopingCart_Ul_Content_items_Counter_Plus">+</span>
-                                  </div>
-
-                                  <span class="shopingCart_Ul_Content_items_item_Remove">X</span>
-                         </li>
-        `;
-        ShopContent.appendTo(cartRow)
-
-
-    })
-})
-
-
-
-})
-
-
-
-
-
+        let QtyValMin=items.getElementsByClassName('shopingCart_Ul_Content_items_Counter_minus')[0];
+        console.log(QtyValMin.addEventListener('click',function(){
+            console.log('test')
+        }))
+        let QtyValPlus=items.getElementsByClassName('shopingCart_Ul_Content_items_Counter_Plus')[0];
+    }
+}
+updateCartTotal()
 
 
 /*

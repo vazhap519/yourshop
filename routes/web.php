@@ -19,8 +19,7 @@ Route::get('/sale',[\App\Http\Controllers\HomeController::class,'sale'])->name('
 Route::get('/about',[\App\Http\Controllers\HomeController::class,'about']);
 });
 
-
-Route::get('/admindashboard',[\App\Http\Controllers\AdminController::class,'index'])->name('dashboard');
+Route::get('/administration',[\App\Http\Controllers\AdminController::class,'index'])->name('admini');
 Route::get('topcat',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'index'])->name('topcat');
 Route::get('/menu_create',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'create'])->name('menu_create');
 Route::post('/menu_store',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'store'])->name('menu_store');

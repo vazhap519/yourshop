@@ -256,7 +256,7 @@
     margin-top: 20px;
 }
 .shopingCart_Ul_Ico_active{
-    background-image: url('./assets/images/cart_active.png');
+    background-image: url('/assets/images/cart_active.png');
 }
 .shopingCart_Ul_Content{
     width: 550px;
@@ -1013,7 +1013,7 @@ h2.carousell_area_box_title{
     content: '';
     width: 100px!important;
     height: 5px;
-    background-image: url('/assets/images/Rectangle\ 1.png');
+    background-image: url('/assets/images/Rectangle\1.png');
     position: absolute;
     top: 15px;
 }
