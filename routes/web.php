@@ -21,6 +21,11 @@ Route::get('/about',[\App\Http\Controllers\HomeController::class,'about']);
 
 Route::get('/administration',[\App\Http\Controllers\AdminController::class,'index'])->name('admini');
 Route::get('topcat',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'index'])->name('topcat');
+Route::get('/menu_index',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'index'])->name('menu_index');
 Route::get('/menu_create',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'create'])->name('menu_create');
 Route::post('/menu_store',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'store'])->name('menu_store');
 Route::get('/menu_show',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'show'])->name('menu_show');
+
+Route::get('/productsIndex',[\App\Http\Controllers\Admin\ProductsController::class,'index'])->name('products_Index');
+Route::get('/products_create',[\App\Http\Controllers\Admin\ProductsController::class,'create'])->name('products_create');
+Route::post('/products_store',[\App\Http\Controllers\Admin\ProductsController::class,'store'])->name('products_store');

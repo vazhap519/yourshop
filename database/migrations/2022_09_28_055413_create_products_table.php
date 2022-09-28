@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('status');
+            $table->string('condition');
             $table->string('colors');
             $table->string('image');
             $table->string('meta_title');

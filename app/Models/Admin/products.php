@@ -12,12 +12,11 @@ class products extends Model
 		'name',
 		'description',
 		'status',
-		'status',
 		'colors',
 		'image',
         'meta_title',
         'meta_keyboards',
         'meta_description'
-        
+
 	];
 }

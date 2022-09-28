@@ -1,7 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Models\Admin\Menus\Menu;
+use App\Models\Admin\products;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -13,7 +16,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        return view('.admin.products.index');
     }
 
     /**
@@ -23,7 +26,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('.admin.products.create');
     }
 
     /**
@@ -34,7 +37,24 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'status'=>'required',
+            'colors'=>'required',
+            'image'=>'required',
+            'meta_title'=>'required',
+            'meta_keyboards'=>'required',
+            'meta_description'=>'required',
+        ]);
+        if ($image = $request->file('image')) {
+            $destinationPath = 'admin/assets/img/productsimages';
+            $productImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $productImage);
+            $input['image'] = "$productImage";
+        }
+        products::create($request->all());
+        return redirect()->back();
     }
 
     /**
@@ -66,9 +86,24 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, products $products)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'status'=>'required',
+            'colors'=>'required',
+            'image'=>'required',
+            'meta_title'=>'required',
+            'meta_keyboards'=>'required',
+            'meta_description'=>'required',
+        ]);
+        if ($image = $request->file('image')) {
+            $destinationPath = 'admin/assets/img/productsimages';
+            $productImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $productImage);
+            $input['image'] = "$productImage";
+        }
     }
 
     /**

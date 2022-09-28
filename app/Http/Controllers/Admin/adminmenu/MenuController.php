@@ -32,4 +32,25 @@ class MenuController extends Controller
     public function show($id){
         dd($id);
     }
+
+
+
+    public function edit($id)
+    {
+        //
+    }
+
+
+
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+
+
+    public function destroy($id)
+    {
+        //
+    }
 }
