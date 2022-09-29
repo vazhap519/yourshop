@@ -1,4 +1,5 @@
 @extends('.layouts.adminindex')
 @section('content')
-    <h1>პროდუქტების დამატება</h1>
+    @foreach($products as $product)
+        {{$product->image}}
 @endsection

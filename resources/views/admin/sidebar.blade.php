@@ -34,7 +34,7 @@
 					<div class="dropdown-menu bg-transparent border-0">
 						<a href="{{route('products_Index')}}" class="dropdown-item">პროდუქტები</a>
 						<a href="{{route('products_create')}}" class="dropdown-item">პროდუქტის დამატება</a>
-						<a href="" class="dropdown-item">პროდუქტის რედაქტირება</a>
+						<a href="{{route('products_edit')}}" class="dropdown-item">პროდუქტის რედაქტირება</a>
 
 					</div>
 				</div>

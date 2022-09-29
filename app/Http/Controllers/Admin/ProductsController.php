@@ -16,7 +16,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('.admin.products.index');
+       $products=(new products())->get();
+        return view('.admin.products.index',compact('products'));
     }
 
     /**
@@ -41,19 +42,23 @@ class ProductsController extends Controller
             'name'=>'required',
             'description'=>'required',
             'status'=>'required',
+            'condition'=>'required',
             'colors'=>'required',
             'image'=>'required',
             'meta_title'=>'required',
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
+            'price'=>'required',
         ]);
         if ($image = $request->file('image')) {
-            $destinationPath = 'admin/assets/img/productsimages';
-            $productImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $productImage);
-            $input['image'] = "$productImage";
+            $destinationPath = 'assets/img/productsimages';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $products['image'] = "$profileImage";
+        }else{
+            unset($products['image']);
         }
-        products::create($request->all());
+        $products->create($request->all());
         return redirect()->back();
     }
 
@@ -74,9 +79,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('.admin.products.edit');
     }
 
     /**
@@ -88,15 +93,18 @@ class ProductsController extends Controller
      */
     public function update(Request $request, products $products)
     {
+
         $request->validate([
             'name'=>'required',
             'description'=>'required',
             'status'=>'required',
+            'condition'=>'required',
             'colors'=>'required',
             'image'=>'required',
             'meta_title'=>'required',
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
+            'price'=>'required',
         ]);
         if ($image = $request->file('image')) {
             $destinationPath = 'admin/assets/img/productsimages';
@@ -104,6 +112,8 @@ class ProductsController extends Controller
             $image->move($destinationPath, $productImage);
             $input['image'] = "$productImage";
         }
+
+        $products->update($request->all());
     }
 
     /**

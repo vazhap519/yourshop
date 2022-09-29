@@ -22,7 +22,7 @@
                     </select>
                     <div class=" mb-3">
                         <label for="product_status">პროდუქტის  მდგომარეობა</label>
-                        <select class="form-select" id="product_status" name="status">
+                        <select class="form-select" id="product_status" name="condition">
                             <option value="0">მეორადი</option>
                             <option value="1">ახალი</option>
                         </select>
@@ -31,7 +31,7 @@
                         <input type="text" class="form-control" id="colors" name="colors">
                     </div>
                     <div class="mb-3">
-                        <label for="image" class="form-label">ფერები</label>
+                        <label for="image" class="form-label"> სურათი</label>
                         <input type="file" class="form-control" id="image" name="image">
                     </div>
                     <div class="mb-3">
@@ -44,8 +44,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="meta_description" class="form-label">meta_description</label>
-                        <textarea t class="form-control" id="meta_description" name="meta_description"></textarea>
+                        <textarea  class="form-control" id="meta_description" name="meta_description"></textarea>
                     </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">ფასი</label>
+                            <input type="text" class="form-control" id="meta_keyboards" name="price">
+                        </div>
                     <button type="submit" class="btn btn-primary">პროდუქტის დამატება</button>
             </form>
         </div>

@@ -29,3 +29,4 @@ Route::get('/menu_show',[\App\Http\Controllers\Admin\adminmenu\MenuController::c
 Route::get('/productsIndex',[\App\Http\Controllers\Admin\ProductsController::class,'index'])->name('products_Index');
 Route::get('/products_create',[\App\Http\Controllers\Admin\ProductsController::class,'create'])->name('products_create');
 Route::post('/products_store',[\App\Http\Controllers\Admin\ProductsController::class,'store'])->name('products_store');
+Route::get('/products_edit',[\App\Http\Controllers\Admin\ProductsController::class,'edit'])->name('products_edit');
