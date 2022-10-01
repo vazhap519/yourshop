@@ -51,7 +51,9 @@
                             <input type="text" class="form-control" id="meta_keyboards" name="price">
                         </div>
                         <button type="submit" class="btn btn-primary">პროდუქტის რედაქტირება</button>
+                    </div>
             </form>
+        </div>
         </div>
     </div>
 @endsection

@@ -30,3 +30,4 @@ Route::get('/productsIndex',[\App\Http\Controllers\Admin\ProductsController::cla
 Route::get('/products_create',[\App\Http\Controllers\Admin\ProductsController::class,'create'])->name('products_create');
 Route::post('/products_store',[\App\Http\Controllers\Admin\ProductsController::class,'store'])->name('products_store');
 Route::get('/products_edit',[\App\Http\Controllers\Admin\ProductsController::class,'edit'])->name('products_edit');
+Route::get('/products_show',[\App\Http\Controllers\Admin\ProductsController::class,'show'])->name('products_show');

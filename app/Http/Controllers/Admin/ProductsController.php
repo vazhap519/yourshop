@@ -36,7 +36,7 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,products $products)
     {
         $request->validate([
             'name'=>'required',
@@ -50,15 +50,8 @@ class ProductsController extends Controller
             'meta_description'=>'required',
             'price'=>'required',
         ]);
-        if ($image = $request->file('image')) {
-            $destinationPath = 'assets/img/productsimages';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $products['image'] = "$profileImage";
-        }else{
-            unset($products['image']);
-        }
-        $products->create($request->all());
+
+        $products->update($request->all());
         return redirect()->back();
     }
 
@@ -68,9 +61,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(products $products)
     {
-        //
+        dd($products);
     }
 
     /**
@@ -106,12 +99,7 @@ class ProductsController extends Controller
             'meta_description'=>'required',
             'price'=>'required',
         ]);
-        if ($image = $request->file('image')) {
-            $destinationPath = 'admin/assets/img/productsimages';
-            $productImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $productImage);
-            $input['image'] = "$productImage";
-        }
+
 
         $products->update($request->all());
     }
