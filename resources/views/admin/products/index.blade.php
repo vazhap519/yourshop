@@ -33,7 +33,7 @@
         <td>{{$product->price}}</td>
         <td>{{$product->sale_price}}</td>
         <td><a href="{{route('products_show',$product->id)}}" class="btn btn-danger">პროდუქტის ნახვა</a> </td>
-        <td><a href="{{route('products_update',$product->id)}}" class="btn btn-dark">პროდუქტის რედაქტირება</a></td>
+        <td><a href="{{route('products_edit/'.$product->id)}}" class="btn btn-dark">პროდუქტის რედაქტირება</a></td>
         </tbody>
     </tr>
     @endforeach

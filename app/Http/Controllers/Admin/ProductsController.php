@@ -86,10 +86,10 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(products $products)
+    public function edit( $id)
     {
-        $product=products::find($products);
-     return view('.admin.products.edit',compact('product'));
+        $product=products::find($id);
+    return view('admin.products.edit',compact('product'));
 
     }
 
@@ -100,9 +100,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, products $products)
+    public function update(Request $request,  $id)
     {
-        $product=products::find($products);
+        $product=products::find($id);
         $request->validate([
             'name'=>'required',
             'description'=>'required',
@@ -124,7 +124,7 @@ class ProductsController extends Controller
             $input['image']="$productsimage";
 
         }
-        $product->update($input);
+      $request->save($input);
     }
 
     /**

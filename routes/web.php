@@ -32,6 +32,7 @@ Route::get('/productsIndex',[\App\Http\Controllers\Admin\ProductsController::cla
 Route::get('/products_create',[\App\Http\Controllers\Admin\ProductsController::class,'create'])->name('products_create');
 Route::post('/products_store',[\App\Http\Controllers\Admin\ProductsController::class,'store'])->name('products_store');
 Route::get('/products_show',[\App\Http\Controllers\Admin\ProductsController::class,'show'])->name('products_show');
-Route::post('/products_edit/{products}',[\App\Http\Controllers\Admin\ProductsController::class,'edit'])->name('products_edit');
-Route::post('/products_update/{products}',[\App\Http\Controllers\Admin\ProductsController::class,'update'])->name('products_update');
+Route::get('products_edit/{id}',[\App\Http\Controllers\Admin\ProductsController::class,'edit'])->name('products_edit');
+
+Route::put('products_update/{id}',[\App\Http\Controllers\Admin\ProductsController::class,'update'])->name('product_update');
 
