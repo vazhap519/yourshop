@@ -16,7 +16,9 @@ Route::prefix('/')->group(function () {
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');
 Route::get('/shop',[\App\Http\Controllers\HomeController::class,'shop'])->name('shop');
 Route::get('/sale',[\App\Http\Controllers\HomeController::class,'sale'])->name('sale');
-Route::get('/about',[\App\Http\Controllers\HomeController::class,'about']);
+Route::get('/about',[\App\Http\Controllers\HomeController::class,'about'])->name('about');
+Route::get('/single_product/{products}',[\App\Http\Controllers\HomeController::class,'single'])->name('single_product');
+Route::get('/checkout/{products}',[\App\Http\Controllers\HomeController::class,'checkout'])->name('checkout');
 });
 
 Route::get('/administration',[\App\Http\Controllers\AdminController::class,'index'])->name('admini');
@@ -29,5 +31,7 @@ Route::get('/menu_show',[\App\Http\Controllers\Admin\adminmenu\MenuController::c
 Route::get('/productsIndex',[\App\Http\Controllers\Admin\ProductsController::class,'index'])->name('products_Index');
 Route::get('/products_create',[\App\Http\Controllers\Admin\ProductsController::class,'create'])->name('products_create');
 Route::post('/products_store',[\App\Http\Controllers\Admin\ProductsController::class,'store'])->name('products_store');
-Route::get('/products_edit',[\App\Http\Controllers\Admin\ProductsController::class,'edit'])->name('products_edit');
 Route::get('/products_show',[\App\Http\Controllers\Admin\ProductsController::class,'show'])->name('products_show');
+Route::post('/products_edit/{products}',[\App\Http\Controllers\Admin\ProductsController::class,'edit'])->name('products_edit');
+Route::post('/products_update/{products}',[\App\Http\Controllers\Admin\ProductsController::class,'update'])->name('products_update');
+

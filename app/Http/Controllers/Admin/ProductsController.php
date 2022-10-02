@@ -36,23 +36,35 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,products $products)
+    public function store(Request $request)
     {
         $request->validate([
             'name'=>'required',
             'description'=>'required',
             'status'=>'required',
             'condition'=>'required',
+            'quantity'=>'required',
             'colors'=>'required',
             'image'=>'required',
             'meta_title'=>'required',
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
             'price'=>'required',
+            'sale_price'=>'required',
         ]);
+        $input=$request->all();
+        if($image=$request->file('image')){
+            $desrinationpath='assets/images/product_images';
+            $productsimage=date('YmdHis').'.'.$image->getClientOriginalExtension();
+            $image->move($desrinationpath,$productsimage);
+            $input['image']="$productsimage";
 
-        $products->update($request->all());
+        }
+        products::create($input);
+
+
         return redirect()->back();
+
     }
 
     /**
@@ -63,7 +75,9 @@ class ProductsController extends Controller
      */
     public function show(products $products)
     {
-        dd($products);
+
+        return view('.admin.products.show',compact('products'));
+
     }
 
     /**
@@ -72,9 +86,11 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(products $products)
     {
-        return view('.admin.products.edit');
+        $product=products::find($products);
+     return view('.admin.products.edit',compact('product'));
+
     }
 
     /**
@@ -86,7 +102,7 @@ class ProductsController extends Controller
      */
     public function update(Request $request, products $products)
     {
-
+        $product=products::find($products);
         $request->validate([
             'name'=>'required',
             'description'=>'required',
@@ -98,10 +114,17 @@ class ProductsController extends Controller
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
             'price'=>'required',
+            'sale_price'=>'required',
         ]);
+        $input=$request->all();
+        if($image=$request->file('image')){
+            $desrinationpath='assets/images/product_images';
+            $productsimage=date('YmdHis').'.'.$image->getClientOriginalExtension();
+            $image->move($desrinationpath,$productsimage);
+            $input['image']="$productsimage";
 
-
-        $products->update($request->all());
+        }
+        $product->update($input);
     }
 
     /**
@@ -110,8 +133,8 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(products $products)
     {
-        //
+        $products->delete();
     }
 }

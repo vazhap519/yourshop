@@ -19,11 +19,15 @@ return new class extends Migration
             $table->string('description');
             $table->string('status');
             $table->string('condition');
+            $table->string('quantity')->nullable();
             $table->string('colors');
             $table->string('image');
             $table->string('meta_title');
             $table->string('meta_keyboards');
             $table->string('meta_description');
+            $table->float('price');
+            $table->float('sale_price');
+            $table->timestamps();
         });
     }
 

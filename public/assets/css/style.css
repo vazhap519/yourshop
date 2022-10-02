@@ -13,30 +13,29 @@
 }
 @font-face {
     font-family: 'dejavuWoff2';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff2');
-
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff2');
 
     font-family: 'dejavuWoff';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff');
 
 
     font-family: 'dejavuEot';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.eot');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.eot');
 
     font-family: 'dejavuSvg';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.svg');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.svg');
 
     font-family: 'dejavuTtf';
-    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.ttf');
+    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.ttf');
 
     font-family: 'Poppins-Regular';
-    src: url('/assets/fonts/popins/Poppins-Regular.ttf');
+    src: url('./assets/fonts/popins/Poppins-Regular.ttf');
 
     font-family: 'Poppins-samibold';
-    src: url('/assets/fonts/popins/Poppins-SemiBold.ttf');
+    src: url('./assets/fonts/popins/Poppins-SemiBold.ttf');
 
     font-family: 'Vermin';
-    src: url('/assets/fonts/Vermin.otf');
+    src: url('./assets/fonts/Vermin.otf');
 }
 #wrapper{
     background-color: black;
@@ -155,7 +154,7 @@
 
     width: 30px;
     height: 30px;
-    background-image: url('/assets/images/Login.png');
+    background-image: url('./assets/images/Login.png');
     margin-top: 20px;
 }
 
@@ -250,13 +249,13 @@
     position: relative;
 }
 .shopingCart_Ul_Ico{
-    background-image: url('/assets/images/cart.png');
+    background-image: url('./assets/images/cart.png');
     width: 30px;
     height: 30px;
     margin-top: 20px;
 }
 .shopingCart_Ul_Ico_active{
-    background-image: url('/assets/images/cart_active.png');
+    background-image: url('./assets/images/cart_active.png');
 }
 .shopingCart_Ul_Content{
     width: 550px;
@@ -413,7 +412,7 @@ Shoping Cart style end
     margin-top: 20px;
     margin-left: 10px;
     background-repeat: no-repeat;
-    background-image: url('/assets/images/heart.png');
+    background-image: url('./assets/images/heart.png');
 }
 
 .Favorites_Ul_Content{
@@ -516,7 +515,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
     width: 25px;
     height: 25px;
     position: absolute;
-    background-image: url("/assets/images/search.png");
+    background-image: url("./assets/images/search.png");
     border: none;
     top: 5px;
     right: 5px;
@@ -576,8 +575,8 @@ span.Favorites_Ul_Content_Sub_R_Title{
     padding-left: 15px;
     padding-right: 15px;
 }
-.content__left_new_content_active{
-    display: block;
+.content_left_new_content_active{
+    display: block!important;
 }
 /*
 =======================================================================================================================
@@ -667,8 +666,39 @@ span.Favorites_Ul_Content_Sub_R_Title{
     margin:15px auto;
     font-family: 'dejavuWoff2';
 }
-.pay_form{
+.checkout_content_sub_form{
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.checkout_content_sub_form label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+.checkout_content_sub_form input {
+    border-radius: 5px;
+    background-color: #ccc;
+    padding-top: 15px;
+    text-align: justify;
+    border: none;
+    outline: none;
+}
+.checkout_content_sub_form input:active {
+    border: none;
+    outline: none;
+}
+.checkout_content_sub_form button{
+    background-color: #DEDEDE!important;
+    border-radius: 5px!important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }
 
 #cart_user{
@@ -890,11 +920,11 @@ h2.carousell_area_box_title{
     display: block!important;
 }
 .content__right_bottom{
-    width: 750px;
+    /*width: 750px;*/
     max-width: 100%;
     height: 400px;
     position: relative;
-    left: 25px;
+    /*left: 25px;*/
     top: 55px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1013,7 +1043,7 @@ h2.carousell_area_box_title{
     content: '';
     width: 100px!important;
     height: 5px;
-    background-image: url('/assets/images/Rectangle\1.png');
+    background-image: url('./assets/images/Rectangle\ 1.png');
     position: absolute;
     top: 15px;
 }
@@ -1848,6 +1878,9 @@ h3.product_boxes_area_Right_Content_product_title {
     font-size: 25px;
     text-decoration: none;
 }
+
+
+
 
 
 .Single_Product_Logo{
