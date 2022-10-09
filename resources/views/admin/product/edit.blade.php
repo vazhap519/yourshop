@@ -3,7 +3,7 @@
     <div class="col-sm-12 col-xl-6">
         <div class="bg-secondary rounded h-100 p-4">
             <h6 class="mb-4">პროდუქტის რედაქტირება</h6>
-            <form action="{{route('products_update/'.$product->id)}}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('products_update',$product->id)}}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label"> სურათი</label>
-                    <input type="file" class="form-control" id="image" name="image">
+                    <input type="file" class="form-control" id="image" name="image" value="">
                     <img src="{{asset('assets/images/product_images/'.$product->image)}}">
                 </div>
                 <div class="mb-3">

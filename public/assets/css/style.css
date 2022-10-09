@@ -13,29 +13,29 @@
 }
 @font-face {
     font-family: 'dejavuWoff2';
-    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff2');
+    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff2');
 
     font-family: 'dejavuWoff';
-    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff');
+    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.woff');
 
 
     font-family: 'dejavuEot';
-    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.eot');
+    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.eot');
 
     font-family: 'dejavuSvg';
-    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.svg');
+    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.svg');
 
     font-family: 'dejavuTtf';
-    src: url('./assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.ttf');
+    src: url('/assets/fonts/dejavu/dejavu-sans-bold-oblique-webfont.ttf');
 
     font-family: 'Poppins-Regular';
-    src: url('./assets/fonts/popins/Poppins-Regular.ttf');
+    src: url('/assets/fonts/popins/Poppins-Regular.ttf');
 
     font-family: 'Poppins-samibold';
-    src: url('./assets/fonts/popins/Poppins-SemiBold.ttf');
+    src: url('/assets/fonts/popins/Poppins-SemiBold.ttf');
 
     font-family: 'Vermin';
-    src: url('./assets/fonts/Vermin.otf');
+    src: url('/assets/fonts/Vermin.otf');
 }
 #wrapper{
     background-color: black;
@@ -154,12 +154,12 @@
 
     width: 30px;
     height: 30px;
-    background-image: url('./assets/images/Login.png');
+    background-image: url('/assets/images/Login.png');
     margin-top: 20px;
 }
 
 .LoginAreaUl_ico_Active{
-    background-image: url('./assets/images/Login_active.png')!important;
+    background-image: url('/assets/images/Login_active.png')!important;
 }
 
 .LoginAreaUl_Content_Active{
@@ -412,7 +412,7 @@ Shoping Cart style end
     margin-top: 20px;
     margin-left: 10px;
     background-repeat: no-repeat;
-    background-image: url('./assets/images/heart.png');
+    background-image: url('/assets/images/heart.png');
 }
 
 .Favorites_Ul_Content{
@@ -515,7 +515,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
     width: 25px;
     height: 25px;
     position: absolute;
-    background-image: url("./assets/images/search.png");
+    background-image: url("/assets/images/search.png");
     border: none;
     top: 5px;
     right: 5px;
