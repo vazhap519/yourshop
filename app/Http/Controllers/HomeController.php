@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,17 +28,20 @@ class HomeController extends Controller
 	public function about(){
 		return view('frontend.about');
 	}
-	public function checkout(){
-		return view('frontend.checkout');
+	public function checkout(Product $products){
+		return view('frontend.checkout',compact('products'));
 	}
 	public function sale(){
+
 		return view('frontend.sale');
 	}
 	public function shop(){
-		return view('frontend.shop');
+        $products= (new Product())->get();
+		return view('frontend.shop',compact('products'));
 	}
-	public function single(){
-		return view('frontend.single');
+	public function single(Product $products){
+
+		return view('frontend.single',compact('products'));
 	}
 
 
