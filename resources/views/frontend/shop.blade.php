@@ -108,23 +108,23 @@
 
             <div class="product_boxes_area_Right">
                 <ul class="product_boxes_area_Right_Content">
-                        @foreach($products as $product)
-                    <li>
-                        <a href="{{route('single_product',$product->id)}}}">
-                            <img src="{{asset('assets/images/product_images',$product->image)}}" alt="">
-                            <h3 class="product_boxes_area_Right_Content_product_title">{{$product->name}}</h3>
-                        </a>
-                        <section class="product_box_area_Right_Content_meta">
-                            <div class="product_box_area_right_Content_desc">
+                    @foreach($products as $product)
+                        <li>
+                            <a href="{{route('single_product',$product->id)}}}">
+                                <img src="{{asset('assets/images/product_images',$product->image)}}" alt="">
+                                <h3 class="product_boxes_area_Right_Content_product_title">{{$product->name}}</h3>
+                            </a>
+                            <section class="product_box_area_Right_Content_meta">
+                                <div class="product_box_area_right_Content_desc">
                <span  class="product_box_area_right_Content_desc_add_To_Cart" >
                    <i class="fa-solid fa-cart-shopping"></i>
             </span>
-                                <span class="product_box_area_right_Content_desc_Price">{{$product->price}}₾</span>
-                                <span class="product_box_area_right_Content_desc_add_To_Fav" ><i class="fa-solid fa-heart"></i></span>
-                            </div>
-                        </section>
-                        </a>
-                    </li>
+                                    <span class="product_box_area_right_Content_desc_Price">{{$product->price}}₾</span>
+                                    <span class="product_box_area_right_Content_desc_add_To_Fav" ><i class="fa-solid fa-heart"></i></span>
+                                </div>
+                            </section>
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </div>

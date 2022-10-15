@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Menus\Menu;
-use App\Models\Admin\Product;
+use App\Models\Admin\products;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -16,8 +16,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-       $products=(new Product())->get();
-        return view('admin.product.index',compact('products'));
+       $products=(new products())->get();
+        return view('.admin.products.index',compact('products'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.product.create');
+        return view('.admin.products.create');
     }
 
     /**
@@ -60,20 +60,24 @@ class ProductsController extends Controller
             $input['image']="$productsimage";
 
         }
-        Product::create($input);
+        products::create($input);
 
 
         return redirect()->back();
 
     }
 
-
-
-
-    public function show(Product $product)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(products $products)
     {
 
-        return view('admin.product.show',compact('product'));
+        return view('.admin.products.show',compact('products'));
+
     }
 
     /**
@@ -82,10 +86,10 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit( $id)
     {
-        $product=Product::find($id);
-    return view('admin.product.edit',compact('product'));
+        $product=products::find($id);
+    return view('admin.products.edit',compact('product'));
 
     }
 
@@ -98,24 +102,21 @@ class ProductsController extends Controller
      */
     public function update(Request $request,  $id)
     {
-
+        $product=products::find($id);
         $request->validate([
             'name'=>'required',
             'description'=>'required',
             'status'=>'required',
             'condition'=>'required',
             'colors'=>'required',
-//            'image'=>'required',
+            'image'=>'required',
             'meta_title'=>'required',
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
             'price'=>'required',
             'sale_price'=>'required',
         ]);
-        $product=Product::findORFail($id);
-
         $input=$request->all();
-
         if($image=$request->file('image')){
             $desrinationpath='assets/images/product_images';
             $productsimage=date('YmdHis').'.'.$image->getClientOriginalExtension();
@@ -123,9 +124,7 @@ class ProductsController extends Controller
             $input['image']="$productsimage";
 
         }
-$product->fill($input);
-      $product->save();
-        return redirect()->back();
+      $request->save($input);
     }
 
     /**
@@ -134,9 +133,8 @@ $product->fill($input);
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product , int $id)
+    public function destroy(products $products)
     {
-        $product=Product::find($id);
-        $product->delete($id);
+        $products->delete();
     }
 }

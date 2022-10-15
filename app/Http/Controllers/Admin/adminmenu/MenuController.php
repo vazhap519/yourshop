@@ -11,8 +11,8 @@ use App\Models\Admin\Menus\Menu;
 class MenuController extends Controller
 {
     public function index(){
-		return view('admin.menu.topmenu.index');
-	}
+        return view('admin.menu.topmenu.index');
+    }
 
     public function create(){
         return view('admin.menu.topmenu.create');
@@ -26,8 +26,8 @@ class MenuController extends Controller
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
         ]);
-            Menu::create($request->all());
-            return redirect()->back();
+        Menu::create($request->all());
+        return redirect()->back();
     }
     public function show($id){
         dd($id);
