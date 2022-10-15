@@ -154,12 +154,12 @@
 
     width: 30px;
     height: 30px;
-    background-image: url('./assets/images/Login.png');
+    background-image: url('/assets/images/Login.png');
     margin-top: 20px;
 }
 
 .LoginAreaUl_ico_Active{
-    background-image: url('./assets/images/Login_active.png')!important;
+    background-image: url('/assets/images/Login_active.png')!important;
 }
 
 .LoginAreaUl_Content_Active{
@@ -167,7 +167,7 @@
 }
 .LoginAreaUl_Content{
     width: 550px;
-    height: 225px;
+    height: auto;
     position: absolute;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 25px;
@@ -230,7 +230,15 @@
     text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
     font-family: 'dejavuWoff2';
 }
-
+section.LoginAreaUl_Content_Form_resets {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+a.LoginAreaUl_Content_Form_resets_forgot {
+    margin-left: 60px;
+}
 /*
 ========================================================================================================================================================
                                         LoginArea End
@@ -249,13 +257,13 @@
     position: relative;
 }
 .shopingCart_Ul_Ico{
-    background-image: url('./assets/images/cart.png');
+    background-image: url('/assets/images/cart.png');
     width: 30px;
     height: 30px;
     margin-top: 20px;
 }
 .shopingCart_Ul_Ico_active{
-    background-image: url('./assets/images/cart_active.png');
+    background-image: url('/assets/images/cart_active.png');
 }
 .shopingCart_Ul_Content{
     width: 550px;
@@ -357,6 +365,10 @@
     font-size: 15px;
     display: flex;
     text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+.shopingCart_Ul_Content_items_Counter_count{
+    width: 15px;
 }
 .shopingCart_Ul_Content_items_Counter_minus{
     margin-top: -2px;
@@ -412,7 +424,7 @@ Shoping Cart style end
     margin-top: 20px;
     margin-left: 10px;
     background-repeat: no-repeat;
-    background-image: url('./assets/images/heart.png');
+    background-image: url('/assets/images/heart.png');
 }
 
 .Favorites_Ul_Content{
@@ -481,7 +493,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
 .Favorites_Ul_Content_Sub_C_Ico{
     width: 30px;
     height: 30px;
-    background-image: url('./assets/images/heart.png');
+    background-image: url('/assets/images/heart.png');
     background-repeat: no-repeat;
 }
 /*
@@ -515,7 +527,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
     width: 25px;
     height: 25px;
     position: absolute;
-    background-image: url("./assets/images/search.png");
+    background-image: url("/assets/images/search.png");
     border: none;
     top: 5px;
     right: 5px;
@@ -1043,7 +1055,7 @@ h2.carousell_area_box_title{
     content: '';
     width: 100px!important;
     height: 5px;
-    background-image: url('./assets/images/Rectangle\ 1.png');
+    background-image: url('/assets/images/Rectangle\ 1.png');
     position: absolute;
     top: 15px;
 }
@@ -1079,7 +1091,7 @@ h2.carousell_area_box_title{
     content: '';
     width: 100px!important;
     height: 5px;
-    background-image: url('./assets/images/Rectangle\ 1.png');
+    background-image: url('/assets/images/Rectangle\ 1.png');
     position: absolute;
     top: 15px;
 }
