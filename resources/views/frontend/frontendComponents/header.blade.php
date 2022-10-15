@@ -26,7 +26,7 @@
               =========================================================================================
           -->
 
-    @include('frontend.frontendComponents.userarea')
+    @include('.frontend.frontendComponents.userarea')
     </nav>
 
 
