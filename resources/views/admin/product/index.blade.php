@@ -17,26 +17,33 @@
 
         </thead>
     </tr>
-    @foreach($products as $product)
+    @foreach($products as $item)
     <tr>
         <tbody style="border: 2px solid">
-        <td>{{$product->name}}</td>
-        <td>{{$product->description}}</td>
-        <td>{{$product->status}}</td>
-        <td>{{$product->condition}}</td>
-        <td>{{$product->quantity}}</td>
-        <td>{{$product->colors}}</td>
-        <td><img src="{{asset('assets/images/product_images/'.$product->image)}}" style="width: 50px;height: 50px"></td>
-        <td>{{$product->meta_title}}</td>
-        <td>{{$product->meta_keyboads}}</td>
-        <td>{{$product->meta_description}}</td>
-        <td>{{$product->price}}</td>
-        <td>{{$product->sale_price}}</td>
-        <td><a href="{{route('products_show',$product->id)}}" class="btn btn-danger">პროდუქტის ნახვა</a> </td>
-        <td><a href="{{route('products_edit',$product->id)}}" class="btn btn-dark">პროდუქტის რედაქტირება</a></td>
+        <td>{{$item->name}}</td>
+        <td>{{$item->description}}</td>
+        <td>{{$item->status}}</td>
+        <td>{{$item->condition}}</td>
+        <td>{{$item->quantity}}</td>
+        <td>{{$item->colors}}</td>
+        <td><img src="{{asset('assets/images/product_images/'.$item->image)}}" style="width: 50px;height: 50px"></td>
+        <td>{{$item->meta_title}}</td>
+        <td>{{$item->meta_keyboads}}</td>
+        <td>{{$item->meta_description}}</td>
+        <td>{{$item->price}}</td>
+        <td>{{$item->sale_price}}</td>
+        <td><a href="{{route('products_show',$item->id)}}" class="btn btn-danger">პროდუქტის ნახვა</a> </td>
+        <td><a href="{{route('products_edit',$item->id)}}" class="btn btn-dark">პროდუქტის რედაქტირება</a></td>
+        <td>
+          <form action="{{route('product_delete',$item->id)}}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button  class="btn btn-dark">პროდუქტის წაშლა</button>
+          </form>
+
+        </td>
         </tbody>
     </tr>
     @endforeach
 </table>
-
 @endsection

@@ -28,15 +28,13 @@ Route::get('/menu_create',[\App\Http\Controllers\Admin\adminmenu\MenuController:
 Route::post('/menu_store',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'store'])->name('menu_store');
 Route::get('/menu_show',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'show'])->name('menu_show');
 
-Route::get('/productsIndex',[\App\Http\Controllers\Admin\ProductsController::class,'index'])->name('products_Index');
-Route::get('/products_create',[\App\Http\Controllers\Admin\ProductsController::class,'create'])->name('products_create');
-Route::post('/products_store',[\App\Http\Controllers\Admin\ProductsController::class,'store'])->name('products_store');
-Route::get('products_show/{product}',[\App\Http\Controllers\Admin\ProductsController::class,'show'])->name('products_show');
-Route::get('products_edit/{id}',[\App\Http\Controllers\Admin\ProductsController::class,'edit'])->name('products_edit');
-
-Route::put('products_update/{id}',[\App\Http\Controllers\Admin\ProductsController::class,'update'])->name('products_update');
-
+Route::get('/productsIndex',[\App\Http\Controllers\Admin\ProductController::class,'index'])->name('products_Index');
+Route::get('/products_create',[\App\Http\Controllers\Admin\ProductController::class,'create'])->name('products_create');
+Route::post('/products_store',[\App\Http\Controllers\Admin\ProductController::class,'store'])->name('products_store');
+Route::get('products_show/{item}',[\App\Http\Controllers\Admin\ProductController::class,'show'])->name('products_show');
+Route::get('products_edit/{id}',[\App\Http\Controllers\Admin\ProductController::class,'edit'])->name('products_edit');
+Route::put('products_update/{id}',[\App\Http\Controllers\Admin\ProductController::class,'update'])->name('products_update');
+Route::delete('product_delete/{id}',[\App\Http\Controllers\Admin\ProductController::class,'destroy'])->name('product_delete');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

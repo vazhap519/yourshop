@@ -28,20 +28,18 @@ class HomeController extends Controller
 	public function about(){
 		return view('frontend.about');
 	}
-	public function checkout(Product $products){
-		return view('frontend.checkout',compact('products'));
+	public function checkout(){
+		return view('frontend.checkout');
 	}
 	public function sale(){
-
 		return view('frontend.sale');
 	}
 	public function shop(){
-        $products= (new Product())->get();
+$products=(new Product())->get();
 		return view('frontend.shop',compact('products'));
 	}
-	public function single(Product $products){
-
-		return view('frontend.single',compact('products'));
+	public function single(){
+		return view('frontend.single');
 	}
 
 

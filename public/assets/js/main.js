@@ -70,7 +70,8 @@ let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 let E_mail=document.querySelector('#email');
 let PassWordCheck=document.querySelector('#password')
 let Sign_in=document.querySelector('#SignIn');
-Sign_in.addEventListener('click',function(){
+Sign_in.addEventListener('click',function(e){
+     e.preventDefault()
  if(E_mail.value<=10){
      alert('შეამოწმე სიმბოლოების რაოდენობა ან ძაღლუკა ')
      filter.test(E_mail.value)

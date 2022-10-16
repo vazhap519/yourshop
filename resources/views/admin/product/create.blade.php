@@ -5,6 +5,13 @@
             <h6 class="mb-4">პროდუქტის დამატება</h6>
             <form action="{{route('products_store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
+{{--                <div class="mb-3">--}}
+{{--                    <label for="productcategory" class="form-label">პროდუქტის  კატეგორია</label>--}}
+{{--                    <select  class="form-control" id="productcategory" name="category">--}}
+{{--                        <option></option>--}}
+{{--                    </select>--}}
+
+{{--                </div>--}}
                 <div class="mb-3">
                     <label for="productname" class="form-label">პროდუქტის  სახელი</label>
                     <input type="text" class="form-control" id="productname" name="name">

@@ -616,24 +616,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
     color: #484848;
     text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
-/*.sales_price{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    font-family: 'Poppins';*/
-/*    font-style: normal;*/
-/*    font-weight: 400;*/
-/*    line-height: 20px;*/
-/*    !* identical to box height *!*/
-/*font-size: 25px;*/
 
-/*    color: rgba(72, 72, 72, 0.9);*/
-/*    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);*/
-/*}*/
-/*.product_box_area_right_Content_desc_Price_old{*/
-/*    text-decoration: line-through;*/
-/*    color: red;*/
-/*}*/
-/*!**/
 
 .Sale_price {
     display: flex;
@@ -876,7 +859,6 @@ h2.carousell_area_box_title{
     height: auto;
     width: 800px;
     max-width: 100%;
-    /* background: linear-gradient(135deg, #703FBB 0%, #A889F2 57.81%); */
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(255, 255, 255, 0)));
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
@@ -1624,21 +1606,26 @@ h2.price_filter_headder {
     margin-left: 15px;
     margin-top: 15px;
     position: relative;
-
+    /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 100%);*/
+    /*filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.5));*/
 }
 .product_boxes_area_Right_Content li a{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    width: 400px;
+    height: auto;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
     filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.5));
     text-decoration: none;
-
+    display: flex;
+    flex-direction: column;
 }
 .product_boxes_area_Right_Content li a img{
-    width: 335px;
+    width: 90%;
     height: 300px;
     position: absolute;
+    margin: auto;
+    left: 5%;
+
 }
 .product_box_area_Right_Content_meta{
     position: relative;
@@ -1647,16 +1634,16 @@ h2.price_filter_headder {
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    top: 260px;
+    top: 300px;
     flex-direction: column;
 }
 h3.product_boxes_area_Right_Content_product_title {
     position: absolute;
-    top: 270px;
+    top: 310px;
     font-family: 'Poppins-Regular';
     text-align: center;
     text-transform: capitalize;
-    color: #333;
+    color: #000;
     width: 100%;
     /* margin-top: 10px; */
     position: absolute;
@@ -1915,3 +1902,58 @@ h3.product_boxes_area_Right_Content_product_title {
 */
 
 
+.regitration_content {
+    width: 550px;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 25px;
+    margin-left: 660px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.regitration_content_header{
+    width: 265px;
+    height: auto;
+    font-size: 16px;
+    margin: 15px auto;
+    font-family: 'dejavuWoff2';
+}
+.regitration_content_form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 25px;
+}
+.regitration_content_form label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+.regitration_content_form input,select,textarea{
+    background: linear-gradient(135deg, rgb(252, 249, 255) 0%, rgba(176, 153, 250, 0.65) 100%);
+    border-radius: 20px;
+    padding-top: 15px;
+    border: none;
+    outline: none;
+    text-align: justify;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.register_user{
+    border: none;
+    margin-top: 15px;
+    border-radius: 25px;
+    padding: 15px;
+    background: #A889F2;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0px 5px 4px rgb(0 0 0 / 25%);
+    font-family: 'dejavuWoff2';
+}

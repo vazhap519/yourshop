@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    protected $table='product';
     protected $fillable=[
         'name',
         'description',
@@ -20,8 +21,6 @@ class Product extends Model
         'meta_keyboards',
         'meta_description',
         'price',
-        'sale_price'
-
-
+        'sale_price',
 	];
 }

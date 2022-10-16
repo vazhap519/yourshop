@@ -5,9 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Menus\Menu;
 use App\Models\Admin\Product;
+use Faker\Core\File;
 use Illuminate\Http\Request;
 
-class ProductsController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,7 +30,6 @@ class ProductsController extends Controller
     {
         return view('admin.product.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -55,21 +55,15 @@ class ProductsController extends Controller
         $input=$request->all();
         if($image=$request->file('image')){
             $desrinationpath='assets/images/product_images';
-            $productsimage=date('YmdHis').'.'.$image->getClientOriginalExtension();
-            $image->move($desrinationpath,$productsimage);
-            $input['image']="$productsimage";
+            $productimage=date('YmdHis').'.'.$image->getClientOriginalExtension();
+            $image->move($desrinationpath,$productimage);
+            $input['image']="$productimage";
 
         }
         Product::create($input);
-
-
         return redirect()->back();
 
     }
-
-
-
-
     public function show(Product $product)
     {
 
@@ -85,7 +79,7 @@ class ProductsController extends Controller
     public function edit($id)
     {
         $product=Product::find($id);
-        return view('admin.product.edit',compact('product'));
+        return view('admin.product.edit');
 
     }
 
@@ -105,7 +99,7 @@ class ProductsController extends Controller
             'status'=>'required',
             'condition'=>'required',
             'colors'=>'required',
-//            'image'=>'required',
+            'image'=>'required',
             'meta_title'=>'required',
             'meta_keyboards'=>'required',
             'meta_description'=>'required',
@@ -118,9 +112,9 @@ class ProductsController extends Controller
 
         if($image=$request->file('image')){
             $desrinationpath='assets/images/product_images';
-            $productsimage=date('YmdHis').'.'.$image->getClientOriginalExtension();
-            $image->move($desrinationpath,$productsimage);
-            $input['image']="$productsimage";
+            $productimage=date('YmdHis').'.'.$image->getClientOriginalExtension();
+            $image->move($desrinationpath,$productimage);
+            $input['image']="$productimage";
 
         }
         $product->fill($input);
@@ -128,15 +122,13 @@ class ProductsController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product , int $id)
+
+    public function destroy(int $id)
     {
-        $product=Product::find($id);
-        $product->delete($id);
+
+        $product=(new Product())->find($id);
+        $product->delete();
+        return redirect()->back();
+
     }
 }

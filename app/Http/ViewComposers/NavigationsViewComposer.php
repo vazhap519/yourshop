@@ -11,7 +11,7 @@ class NavigationsViewComposer
 {
     public function compose(View $view): void
     {
-        $products= (new Product())->get();
-        $view->with('product', $products);
+        $product= (new Product())->get();
+        $view->with('product', $product);
     }
 }
