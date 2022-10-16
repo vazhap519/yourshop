@@ -41,32 +41,6 @@
               -->
         <ul class="userArea">
             <li class="LoginArea">
-{{--            <li class="LoginAreaUl_Content">--}}
-
-{{--                <form  class="LoginAreaUl_Content_Form">--}}
-{{--                    <div class="LoginAreaUl_Content_Form_Inputs">--}}
-{{--                        <label for="email" >ემაილი</label>--}}
-{{--                        <input type="email" id="email" name="email" placeholder="admin@expample.com">--}}
-{{--                        <label for="password" >პაროლი</label>--}}
-{{--                        <input type="password"  placeholder="password"  id="password" name="password">--}}
-{{--                    </div>--}}
-
-{{--                    <div class="LoginAreaUl_Content_Form_Buttons">--}}
-{{--                        <button type="submit" id="SignIn" name="SignIn">შესვლა</button>--}}
-{{--                        <button type="submit" id="SignUp" name="SignUp">რეგისტრაცია</button>--}}
-{{--                    </div>--}}
-{{--                </form>--}}
-{{--            </li>--}}
-
-
-
-
-
-
-
-
-
-
                 <ul class="LoginAreaUl">
                     <li class="LoginAreaUl_ico"></li>
                     <li class="LoginAreaUl_Content">
