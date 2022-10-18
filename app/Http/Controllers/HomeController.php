@@ -38,8 +38,9 @@ class HomeController extends Controller
 $products=(new Product())->get();
 		return view('frontend.shop',compact('products'));
 	}
-	public function single(){
-		return view('frontend.single');
+	public function single(Product $product){
+        $products=(new Product)->find($product);
+		return view('frontend.single',compact('products'));
 	}
 
 

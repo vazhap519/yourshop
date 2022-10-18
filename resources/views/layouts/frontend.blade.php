@@ -45,25 +45,25 @@
                     <li class="LoginAreaUl_ico"></li>
                     <li class="LoginAreaUl_Content">
 
-                        <form method="POST" action="{{ route('login') }}" class="LoginAreaUl_Content_Form">
+                        <form action="{{route('/profile')}}"  class="LoginAreaUl_Content_Form" method="post">
                             @csrf
-
+{{--                            <input type="hidden" name="_method" value="PUT">--}}
                             <div class="LoginAreaUl_Content_Form_Inputs">
-                                <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-
-                                <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
+                                <label for="email" class="col-md-4 col-form-label text-md-end">ემაილი</label>
+                                <input id="email" type="email" name="email">
+                                <span class="text-danger">@error('email') {{$message}} @enderror </span>
+                                <label for="password" class="col-md-4 col-form-label text-md-end">პაროლი</label>
+                                <input id="password" type="password" class="form-control">
+                                <span class="text-danger">@error('password') {{$message}} @enderror </span>
                                 <section class="LoginAreaUl_Content_Form_resets">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember">
                                         <label class="form-check-label" for="remember">
-
+                                            დამახსოვრება
                                         </label>
 
                                             <a class="LoginAreaUl_Content_Form_resets_forgot" href="">
+                                                დაგავიწყდა პაროლი
                                             </a>
 
                                     </div>
@@ -75,56 +75,10 @@
 
 
                             <div class="LoginAreaUl_Content_Form_Buttons">
-                        <button type="submit" id="SignIn" name="SignIn">  </button>
-                        <button type="submit" id="SignUp" name="SignUp"></button>
+                        <button type="submit" id="SignIn"  class="user_btns"> შესვლა </button>
+                        <a href="{{route('registration')}}" id="SignUp"  class="user_btns">რეგისტრაცია</a>
 </div>
                         </form>
-{{--                        @section('scripts')--}}
-{{--                            <script>--}}
-{{--                                $(document).ready(function() {--}}
-{{--                                    $('.LoginAreaUl_Content_Form').validate({--}}
-{{--                                        rules: {--}}
-{{--                                            email: {--}}
-{{--                                                required: true,--}}
-{{--                                                email: true--}}
-{{--                                            },--}}
-{{--                                            password: {--}}
-{{--                                                required: true--}}
-{{--                                            }--}}
-{{--                                        },--}}
-{{--                                        messages: {--}}
-{{--                                            email: {--}}
-{{--                                                required: "{{ __('Per favore inserisci il tuo indirizzo e-mail.') }}",--}}
-{{--                                                email: "{{ __('Per favore inserisci un indirizzo e-mail valido.') }}"--}}
-{{--                                            },--}}
-{{--                                            password: {--}}
-{{--                                                required: "{{ __('Per favore inserisci la password.') }}"--}}
-{{--                                            }--}}
-{{--                                        },--}}
-{{--                                        submitHandler: function(form) {--}}
-{{--                                            $.ajaxSetup({--}}
-{{--                                                headers: {--}}
-{{--                                                    'X-CSRF-TOKEN': '{{ csrf_token() }}'--}}
-{{--                                                }--}}
-{{--                                            });--}}
-
-{{--                                            $.ajax({--}}
-{{--                                                type: "post",--}}
-{{--                                                url: "{{ route('login') }}",--}}
-{{--                                                data: $(form).serialize(),--}}
-{{--                                                success: function (response) {--}}
-{{--                                                    console.log(response.errors.length);--}}
-{{--                                                    location.reload({{ url('home') }});--}}
-{{--                                                },--}}
-{{--                                                error: function(data, textStatus, jqXHR) {--}}
-{{--                                                    alert(textStatus + ': ' + jqXHR + ' (' + data + ')');--}}
-{{--                                                }--}}
-{{--                                            });--}}
-{{--                                        }--}}
-{{--                                    });--}}
-{{--                                });--}}
-{{--                            </script>--}}
-{{--                        @endsection--}}
                     </li>
                 </ul>
                 <!--

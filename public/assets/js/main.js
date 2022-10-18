@@ -70,26 +70,26 @@ let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 let E_mail=document.querySelector('#email');
 let PassWordCheck=document.querySelector('#password')
 let Sign_in=document.querySelector('#SignIn');
-Sign_in.addEventListener('click',function(e){
-     e.preventDefault()
- if(E_mail.value<=10){
-     alert('შეამოწმე სიმბოლოების რაოდენობა ან ძაღლუკა ')
-     filter.test(E_mail.value)
-     E_mail.style.border="3px solid red"
-
- }else{
-
-     E_mail.style.border="3px solid #A889F2"
- }
-
- if(PassWordCheck.value<=10){
-    alert('შეამოწმე პაროლის სიგრძე და სისწორე ')
-    PassWordCheck.style.border="3px solid red"
- }else{
-
-    PassWordCheck.style.border="3px solid #A889F2"
- }
-})
+// Sign_in.addEventListener('click',function(e){
+//      e.preventDefault()
+//  if(E_mail.value<=10){
+//      alert('შეამოწმე სიმბოლოების რაოდენობა ან ძაღლუკა ')
+//      filter.test(E_mail.value)
+//      E_mail.style.border="3px solid red"
+//
+//  }else{
+//
+//      E_mail.style.border="3px solid #A889F2"
+//  }
+//
+//  if(PassWordCheck.value<=10){
+//     alert('შეამოწმე პაროლის სიგრძე და სისწორე ')
+//     PassWordCheck.style.border="3px solid red"
+//  }else{
+//
+//     PassWordCheck.style.border="3px solid #A889F2"
+//  }
+// })
 /*
 =============================================================================================
                         End Login Validation

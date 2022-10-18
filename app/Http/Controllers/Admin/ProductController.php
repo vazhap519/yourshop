@@ -67,6 +67,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
 
+
         return view('admin.product.show',compact('product'));
     }
 
@@ -106,7 +107,7 @@ class ProductController extends Controller
             'price'=>'required',
             'sale_price'=>'required',
         ]);
-        $product=Product::findORFail($id);
+        $product=Product::find($id);
 
         $input=$request->all();
 

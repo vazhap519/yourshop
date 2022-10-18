@@ -215,7 +215,7 @@
     margin-left: 25px;
     margin-top: 30px;
 }
-.LoginAreaUl_Content_Form_Buttons button{
+.LoginAreaUl_Content_Form_Buttons .user_btns {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
@@ -229,6 +229,7 @@
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
     font-family: 'dejavuWoff2';
+    text-decoration: none;
 }
 section.LoginAreaUl_Content_Form_resets {
     display: flex;
@@ -1287,105 +1288,7 @@ h2.carousell_area_box_title{
     width: 100%;
     flex-direction: column;
 }
-.mega_menu{
-    width: 100%;
-    height: auto;
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
-    margin-top: 60px;
-    position: relative;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 38px;
 
-    color: #484848;
-
-    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-
-}
-.mega_menu_ul{
-    display: inline-flex;
-    list-style: none;
-    width: 90%;
-    justify-content: space-around;
-    position: relative;
-}
-.mega_menu_ul >li{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-
-}
-.mega_menu_ul >li a{
-    color:#484848;
-    font-size: 25px;
-    font-family: 'Poppins';
-    text-decoration: none;
-}
-.mega_menu_ul_sub {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0px 20px 50px rgb(0 0 0 / 25%);
-    width: 100%;
-    top: 70px;
-    z-index: 999;
-    display: none;
-    list-style: none;
-    justify-content: space-between;
-    left: 25px;
-}
-.mega_menu_ul >li:hover .mega_menu_ul_sub{
-    display: flex;
-}
-.mega_menu_ul_sub > ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    height: auto;
-
-}
-.mega_menu_ul_sub > ul li a.mega_menu_ul_sub_header{
-    font-family: 'Poppins-Regular';
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 38px;
-    letter-spacing: 0em;
-    text-align: left;
-    text-transform: capitalize;
-    margin-top: 10px;
-    display: block;
-    position: relative;
-
-}
-.mega_menu_ul_sub > ul li a.mega_menu_ul_sub_header::after{
-    position: absolute;
-    width: 200px;
-    height: 5px;
-    content: '';
-    background: linear-gradient(180deg, #8533FF 0%, rgba(133, 51, 255, 0) 100%);
-    top: 55px;
-    left: 0;
-
-}
-.mega_menu_ul_sub_sub > ul{
-    list-style: none;
-}
-.mega_menu_ul_sub_sub > ul li{
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-.mega_menu_ul_sub_sub > ul li a{
-    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    color: #484848;
-}
 /*
 =======================================================================================================================
                                                      MEGA MENU AREA END
@@ -1403,10 +1306,14 @@ h2.carousell_area_box_title{
 .product_boxes_area_left{
     width: 500px;
     max-width: 100%;
-    height: 500px;
+    height: auto;
     margin-left: 30px;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+}
+.product_boxes_area_category{
+    margin-right: 30px;
+    margin-left: 0!important;
 }
 .price_filter{
     width: 450px;
@@ -1426,7 +1333,8 @@ h2.price_filter_headder {
     margin: auto;
 }
 .price_filter_box{
-    width: 100%;
+    width: 400px;
+    max-width: 100%;
     height: auto;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
@@ -1584,6 +1492,7 @@ h2.price_filter_headder {
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
     margin-left: 25px;
+    margin-right: 25px;
     display: flex;
     flex-direction: row;
 }

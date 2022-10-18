@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('ind
 Route::get('/shop',[\App\Http\Controllers\HomeController::class,'shop'])->name('shop');
 Route::get('/sale',[\App\Http\Controllers\HomeController::class,'sale'])->name('sale');
 Route::get('/about',[\App\Http\Controllers\HomeController::class,'about'])->name('about');
-Route::get('/single_product/{product}',[\App\Http\Controllers\HomeController::class,'single'])->name('single_product');
+Route::get('/single_product/{products}',[\App\Http\Controllers\HomeController::class,'single'])->name('single_product');
 Route::get('/checkout/{product}',[\App\Http\Controllers\HomeController::class,'checkout'])->name('checkout');
 });
 
@@ -36,5 +37,11 @@ Route::get('products_edit/{id}',[\App\Http\Controllers\Admin\ProductController::
 Route::put('products_update/{id}',[\App\Http\Controllers\Admin\ProductController::class,'update'])->name('products_update');
 Route::delete('product_delete/{id}',[\App\Http\Controllers\Admin\ProductController::class,'destroy'])->name('product_delete');
 
-Auth::routes();
+
+
+Route::post('login',[\App\Http\Controllers\Admin\UserAuthController::class,'login'])->name('login');
+
+Route::get('registration',[\App\Http\Controllers\Admin\UserAuthController::class,'register'])->name('registration');
+Route::post('create',[\App\Http\Controllers\Admin\UserAuthController::class,'create'])->name('regiter_user');
+Route::post('/profile',[\App\Http\Controllers\Admin\UserAuthController::class,'profile'])->name('/profile');
 
