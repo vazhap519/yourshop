@@ -5,8 +5,8 @@
             <div class="single_product_content_Top_desc_ToP">
                 <div class="single_product_content_Top_desc_Left">
                     <div class="single_product_content_Top_desc_Left_top">
-                        <img src="./assets/images/product_images/ps.png" alt="" class="single_product_content_Top_desc_Left_img">
-                        <div class="single_product_content_Top_desc_Left_price">500$</div>
+                        <img src="{{asset('assets/images/product_images/'.$product->image)}}" alt="" class="single_product_content_Top_desc_Left_img">
+                        <div class="single_product_content_Top_desc_Left_price">{{$product->price}}</div>
                     </div>
 
                     <section class="single_product_content_Top_desc_Left_colors">
@@ -27,11 +27,11 @@
 
                 <div class="single_product_content_Top_desc_right">
                     <h1 class="single_product_content_Top_desc_right_header">
-                        {{$products->name}}
+                        {{$product->name}}
                     </h1>
                     <ul class="single_product_content_Top_desc_right_ul">
 
-                        <li> {{$products->description}}</li>
+                        <li> {{$product->description}}</li>
 
                     </ul>
 
@@ -39,7 +39,7 @@
                         <div class="single_product_content_Top_desc_right_payment_area_Price">
                             <ul class="single_product_content_Top_desc_right_payment_area_Price_H">
                                 <li class="single_product_content_Top_desc_right_payment_area_Price_H_text">ფასი</li>
-                                <li class="single_product_content_Top_desc_right_payment_area_Price_price"> {{$products->price}}</li>
+                                <li class="single_product_content_Top_desc_right_payment_area_Price_price"> {{$product->price}}</li>
                             </ul>
 
 
@@ -52,7 +52,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="{{route('checkout',$products->id)}}" class="checkout_btn">შეძენა</a>
+                                    <a href="{{route('checkout',$product->id)}}" class="checkout_btn">შეძენა</a>
                                 </li>
                             </ul>
 

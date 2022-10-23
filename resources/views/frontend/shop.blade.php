@@ -40,7 +40,7 @@
                 <ul class="product_boxes_area_Right_Content">
                     @foreach($products as $item)
                         <li>
-                            <a href="{{route('single_product'.$item->id)}}">
+                            <a href="{{route('single_product',$item->id)}}">
                                 <img src="{{asset('assets/images/product_images/'.$item->image)}}"  alt="">
                                 <h3 class="product_boxes_area_Right_Content_product_title">{{$item->name}}</h3>
                                 <section class="product_box_area_Right_Content_meta">
@@ -54,7 +54,6 @@
                                 </section>
                             </a>
                         </li>
-                            </a>
 
                     @endforeach
                 </ul>

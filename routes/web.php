@@ -18,7 +18,7 @@ Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('ind
 Route::get('/shop',[\App\Http\Controllers\HomeController::class,'shop'])->name('shop');
 Route::get('/sale',[\App\Http\Controllers\HomeController::class,'sale'])->name('sale');
 Route::get('/about',[\App\Http\Controllers\HomeController::class,'about'])->name('about');
-Route::get('/single_product/{products}',[\App\Http\Controllers\HomeController::class,'single'])->name('single_product');
+Route::get('/single_product/{product}',[\App\Http\Controllers\HomeController::class,'single'])->name('single_product');
 Route::get('/checkout/{product}',[\App\Http\Controllers\HomeController::class,'checkout'])->name('checkout');
 });
 
@@ -44,4 +44,7 @@ Route::post('login',[\App\Http\Controllers\Admin\UserAuthController::class,'logi
 Route::get('registration',[\App\Http\Controllers\Admin\UserAuthController::class,'register'])->name('registration');
 Route::post('create',[\App\Http\Controllers\Admin\UserAuthController::class,'create'])->name('regiter_user');
 Route::post('/profile',[\App\Http\Controllers\Admin\UserAuthController::class,'profile'])->name('/profile');
+
+Route::get('/search',[\App\Http\Controllers\Admin\SearchController::class,'search'])->name('search');
+
 

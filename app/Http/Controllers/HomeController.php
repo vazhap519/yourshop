@@ -39,8 +39,8 @@ $products=(new Product())->get();
 		return view('frontend.shop',compact('products'));
 	}
 	public function single(Product $product){
-        $products=(new Product)->find($product);
-		return view('frontend.single',compact('products'));
+        $product=(new Product())->find($product->id)->first();
+      return view('frontend.single',compact('product'));
 	}
 
 

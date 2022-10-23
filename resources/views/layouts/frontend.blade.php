@@ -241,8 +241,11 @@
                           =========================================================================================
                       -->
             <li class="Search_area">
-                <input type="search" name="search" class="search_input">
-                <button type="submit" class="search_input_btn"></button>
+
+                    <input type="search" name="search" id="search" class="search_input">
+                    <a href="{{route('search')}}"  class="search_input_btn"></a>
+
+
             </li>
         </ul>
         <!--
@@ -296,7 +299,25 @@
 	  -->
     <script src="{{asset('/assets/js/jquery.js')}}"></script>
 	<script src="{{asset('/assets/js/main.js')}}"></script>
+<script>
+$('#search').on('keyup',function (){
+    var searchQuery=$(this).val();
+    $.ajax({
+        method:"GET",
+        url:'{{route("search")}}',
+        datatype: 'json',
+        data:{
+            '_token':'{{csrf_token()}}',
+            searchQuery:searchQuery
+        },
+        success:function (res){
 
+            console.log($('.searchprod').html(res))
+        }
+
+    })
+})
+</script>
 </div>
 </body>
 </html>
