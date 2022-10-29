@@ -519,7 +519,7 @@ span.Favorites_Ul_Content_Sub_R_Title{
     height: 40px;
     background: linear-gradient(135deg, #FCF9FF 0%, rgba(176, 153, 250, 0.65) 100%);
     border-radius: 20px;
-    display: none;
+    display: flex;
 }
 .search_input_active{
     display: block;

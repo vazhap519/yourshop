@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use  Illuminate\Support\Facades\Hash;
 
 class UserAuthController extends Controller
@@ -57,4 +58,8 @@ if ($query){
         return view('admin.users.profile');
     }
 
+    function logout(Request $request){
+        Auth::logout();
+        return redirect()->route('index');
+    }
 }

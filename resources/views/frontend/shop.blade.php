@@ -1,4 +1,4 @@
-@extends('layouts.frontend');
+@extends('layouts.frontend')
 @section('content')
     <div class="content market_content">
 
@@ -102,3 +102,4 @@
 
     </div>
 @endsection
+

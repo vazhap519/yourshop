@@ -299,25 +299,19 @@
 	  -->
     <script src="{{asset('/assets/js/jquery.js')}}"></script>
 	<script src="{{asset('/assets/js/main.js')}}"></script>
-<script>
-$('#search').on('keyup',function (){
-    var searchQuery=$(this).val();
-    $.ajax({
-        method:"GET",
-        url:'{{route("search")}}',
-        datatype: 'json',
-        data:{
-            '_token':'{{csrf_token()}}',
-            searchQuery:searchQuery
-        },
-        success:function (res){
-
-            console.log($('.searchprod').html(res))
-        }
-
-    })
-})
-</script>
+    <script>
+        $("#search").on('keyup',function (){
+            var value=$(this).val();
+            $.ajax({
+                medthod:'get',
+                url:{{route('search')}},
+                data:{'search':value},
+                success:function (response){
+                    console.log(response)
+                }
+            })
+        })
+    </script>
 </div>
 </body>
 </html>

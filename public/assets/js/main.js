@@ -166,20 +166,20 @@ Wish_ico.addEventListener('click', (e)=>{
                         End Wishlist Area
 =============================================================================================
 */
-let seaarchArea=document.querySelector('.Search_area');
-let searchBtn=document.querySelector('.search_input_btn');
-let searchInp=document.querySelector(".search_input");
-searchBtn.addEventListener('click',(e)=>{
-    e.preventDefault();
-    if (searchInp.classList.contains('search_input_active')){
-        searchInp.classList.remove("search_input_active");
-        seaarchArea.style.flexDirection="row-reverse";
-    }else{
-        searchInp.classList.add("search_input_active");
-        seaarchArea.style.flexDirection="row";
-    }
-
-})
+// let seaarchArea=document.querySelector('.Search_area');
+// let searchBtn=document.querySelector('.search_input_btn');
+// let searchInp=document.querySelector(".search_input");
+// searchBtn.addEventListener('click',(e)=>{
+//     e.preventDefault();
+//     if (searchInp.classList.contains('search_input_active')){
+//         searchInp.classList.remove("search_input_active");
+//         seaarchArea.style.flexDirection="row-reverse";
+//     }else{
+//         searchInp.classList.add("search_input_active");
+//         seaarchArea.style.flexDirection="row";
+//     }
+//
+// })
 
 /*
 =============================================================================================
