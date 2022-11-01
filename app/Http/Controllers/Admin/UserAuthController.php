@@ -11,15 +11,19 @@ use  Illuminate\Support\Facades\Hash;
 class UserAuthController extends Controller
 {
 
-    function register(){
+   public function register(){
         return view('auth.register');
     }
-    function create(Request $request){
+   public function create(Request $request){
         $request->validate([
             'name'=>'required',
             'lastname'=>'required',
             'email'=>'required|email|unique:users',
             'password'=>'required|min:5|max:12',
+            'region'=>'required',
+            'city'=>'required',
+            'full_address'=>'required',
+            'phone'=>'required',
         ]);
         $user=new User();
         $user->name=$request->name;
@@ -34,31 +38,17 @@ if ($query){
 }
     }
 
-
-    function login(Request $request){
-        $request->validate([
-            'email'=>'required|email',
-            'password'=>'required|min:5|max:12',
-        ]);
-        $user=User::where('email','=', $request->email)->first();
-        if($user){
-                if(Hash::check($request->password,$user->password)){
-                    $request->session()->put('LoggedUser',$user->id);
-                    return redirect::to('profile');
-                }
-                else{
-                    return back()->with('fail','this email and passord not found');
-                }
-        }else{
-            return back()->with('fail','no account this email');
-        }
-    }
-
-    function profile(){
+    public  function profile(){
         return view('admin.users.profile');
     }
 
-    function logout(Request $request){
+
+
+public function userAuth(Request $request){
+       dd($request);
+}
+
+    public function logout(Request $request){
         Auth::logout();
         return redirect()->route('index');
     }

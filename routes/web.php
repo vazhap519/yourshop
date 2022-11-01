@@ -22,6 +22,8 @@ Route::get('/single_product/{product}',[\App\Http\Controllers\HomeController::cl
 Route::get('/checkout/{product}',[\App\Http\Controllers\HomeController::class,'checkout'])->name('checkout');
 
 });
+Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
+
 
 Route::get('/administration',[\App\Http\Controllers\AdminController::class,'index'])->name('admini');
 Route::get('topcat',[\App\Http\Controllers\Admin\adminmenu\MenuController::class,'index'])->name('topcat');
@@ -37,14 +39,11 @@ Route::get('products_show/{item}',[\App\Http\Controllers\Admin\ProductController
 Route::get('products_edit/{id}',[\App\Http\Controllers\Admin\ProductController::class,'edit'])->name('products_edit');
 Route::put('products_update/{id}',[\App\Http\Controllers\Admin\ProductController::class,'update'])->name('products_update');
 Route::delete('product_delete/{id}',[\App\Http\Controllers\Admin\ProductController::class,'destroy'])->name('product_delete');
+});
 
 
 
-Route::post('login',[\App\Http\Controllers\Admin\UserAuthController::class,'login'])->name('login');
-Route::get('logout',[\App\Http\Controllers\Admin\UserAuthController::class,'logout'])->name('logout');
-Route::get('registration',[\App\Http\Controllers\Admin\UserAuthController::class,'register'])->name('registration');
-Route::post('create',[\App\Http\Controllers\Admin\UserAuthController::class,'create'])->name('regiter_user');
-Route::post('/profile',[\App\Http\Controllers\Admin\UserAuthController::class,'profile'])->name('/profile');
+
 
 
 
@@ -52,4 +51,14 @@ Route::post('/profile',[\App\Http\Controllers\Admin\UserAuthController::class,'p
 Route::get('category_index',[\App\Http\Controllers\Admin\CategoryController::class,'index'])->name('category_index');
 Route::get('category_create',[\App\Http\Controllers\Admin\CategoryController::class,'create'])->name('category_create');
 Route::get('category_store',[\App\Http\Controllers\Admin\CategoryController::class,'store'])->name('category_store');
+
 Route::get('search',[\App\Http\Controllers\Admin\SearchController::class,'search'])->name('search');
+
+Route::post('userAuth',[\App\Http\Controllers\Admin\UserAuthController::class,'userAuth'])->name('userAuth');
+
+
+
+Route::get('logout',[\App\Http\Controllers\Admin\UserAuthController::class,'logout'])->name('logout');
+Route::get('registration',[\App\Http\Controllers\Admin\UserAuthController::class,'register'])->name('registration');
+Route::post('create',[\App\Http\Controllers\Admin\UserAuthController::class,'create'])->name('regiter_user');
+Route::post('profile',[\App\Http\Controllers\Admin\UserAuthController::class,'profile'])->name('profile');

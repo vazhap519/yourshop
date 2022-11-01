@@ -17,9 +17,12 @@ class AdminMidleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!Auth::user()->role_as=="1"){
-            return redirect('/')->with('status', 'წვდომა უარყოფილია არ ხართ ადმინისტრატორი');
-        }
-        return $next($request);
+      if (Auth::check()){
+          if (Auth::user()->role=='1'){
+            return $next($request);
+          }else{
+              return redirect()->route('index');
+          }
+      }
     }
 }

@@ -45,16 +45,16 @@
                     <li class="LoginAreaUl_ico"></li>
                     <li class="LoginAreaUl_Content">
 
-                        <form action="{{route('/profile')}}"  class="LoginAreaUl_Content_Form" method="post">
+                        <form action="{{route('userAuth')}}" class="LoginAreaUl_Content_Form" method="POST" >
                             @csrf
-{{--                            <input type="hidden" name="_method" value="PUT">--}}
+
                             <div class="LoginAreaUl_Content_Form_Inputs">
                                 <label for="email" class="col-md-4 col-form-label text-md-end">ემაილი</label>
                                 <input id="email" type="email" name="email">
-                                <span class="text-danger">@error('email') {{$message}} @enderror </span>
+                                <span class="text-danger"></span>
                                 <label for="password" class="col-md-4 col-form-label text-md-end">პაროლი</label>
                                 <input id="password" type="password" class="form-control">
-                                <span class="text-danger">@error('password') {{$message}} @enderror </span>
+                                <span class="text-danger"></span>
                                 <section class="LoginAreaUl_Content_Form_resets">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember">
@@ -75,10 +75,11 @@
 
 
                             <div class="LoginAreaUl_Content_Form_Buttons">
-                        <button type="submit" id="SignIn"  class="user_btns"> შესვლა </button>
-                        <a href="{{route('registration')}}" id="SignUp"  class="user_btns">რეგისტრაცია</a>
+                        <button  type="submit"  class="user_btns"> შესვლა </button>
+
 </div>
                         </form>
+                        <a href="{{route('registration')}}" id="SignUp"  class="user_btns">რეგისტრაცია</a>
                     </li>
                 </ul>
                 <!--

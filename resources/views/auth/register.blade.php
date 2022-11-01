@@ -28,30 +28,30 @@
             <label for="password">პაროლი</label>
             <input type="password" id="password" name="password"  >
 
-{{--            <label for="password2">გაიმეორეთ პაროლი</label>--}}
-{{--            <input type="password" id="password2" name="password">--}}
+            <label for="password2">გაიმეორეთ პაროლი</label>
+            <input type="password" id="password2" name="password">
 
 
-{{--            <label for="region">რაიონი</label>--}}
-{{--            <select id="region" name="region">--}}
-{{--                <option name="">შიდა ქართლი</option>--}}
-{{--                <option name="">ქვემო ქართლი</option>--}}
-{{--                <option name="">რაჭა-ლეჩხუმი</option>--}}
-{{--                <option name="">აჭარა</option>--}}
-{{--                <option name="">გურია</option>--}}
-{{--                <option name="">კახეთი</option>--}}
-{{--            </select>--}}
+            <label for="region">რაიონი</label>
+            <select id="region" name="region">
+                <option  selected >შიდა ქართლი</option>
+                <option >ქვემო ქართლი</option>
+                <option >რაჭა-ლეჩხუმი</option>
+                <option >აჭარა</option>
+                <option >გურია</option>
+                <option >კახეთი</option>
+            </select>
 
-{{--            <label for="city">ქალაქები</label>--}}
-{{--            <select id="city" name="city">--}}
-{{--                <option name="">თბილისი</option>--}}
-{{--                <option name="">ბათუმი</option>--}}
-{{--                <option name="">გორი</option>--}}
-{{--            </select>--}}
-{{--            <label for="address">მისამართი</label>--}}
-{{--            <textarea id="address" name="full_address" placeholder="ჩაწერეთ სრული მისამართი"></textarea>--}}
-{{--            <label for="phone">ტელეფონის ნომერი</label>--}}
-{{--            <input type="text" id="phone" name="phone">--}}
+            <label for="city">ქალაქები</label>
+            <select id="city" name="city">
+                <option name="">თბილისი</option>
+                <option name="">ბათუმი</option>
+                <option name="">გორი</option>
+            </select>
+            <label for="address">მისამართი</label>
+            <textarea id="address" name="full_address" placeholder="ჩაწერეთ სრული მისამართი"></textarea>
+            <label for="phone">ტელეფონის ნომერი</label>
+            <input type="text" id="phone" name="phone">
             <button type="submit" class="register_user">რეგისტრაცია</button>
         </form>
     </div>

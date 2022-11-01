@@ -13,5 +13,9 @@ protected $fillable=[
     'lastname',
     'email',
     'password',
+    'region',
+    'city',
+    'full_address',
+    'phone',
 ];
 }
